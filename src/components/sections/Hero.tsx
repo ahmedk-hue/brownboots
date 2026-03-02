@@ -40,12 +40,19 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+            <h1 className="text-6xl md:text-8xl font-display font-bold mb-6 leading-tight tracking-tighter">
               Precision Repairs. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary drop-shadow-sm">
                 Expert Remodeling.
               </span>
             </h1>
+
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              animate={{ width: 80, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="h-1.5 bg-primary mb-10 rounded-full shadow-lg shadow-primary/40"
+            />
 
             <p className="text-slate-300 text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
               From luxury kitchens to finished basements, BrownBoot Repairs & Remodeling delivers craftsmanship that raises the value of your home.
