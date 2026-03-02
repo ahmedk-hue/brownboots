@@ -33,16 +33,16 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-md mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-md mb-6">
               <Star className="w-4 h-4 text-primary fill-primary" />
               <span className="text-primary font-bold text-sm uppercase tracking-wider">
                 #1 Rated in Westmoreland County
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-display font-bold mb-4 leading-[1.1]">
-              We Don't Just Renovate. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
+            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight">
+              We Don't Just Renovate.
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400 block pt-2">
                 We Build Your Dream.
               </span>
             </h1>
