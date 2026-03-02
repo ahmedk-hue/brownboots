@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 export function Navbar() {
@@ -16,9 +16,8 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+        }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#" className="font-display font-bold text-2xl tracking-tighter">
@@ -27,22 +26,50 @@ export function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          <a href="#services" className={`font-medium hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-white/90"}`}>Services</a>
-          <a href="#locations" className={`font-medium hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-white/90"}`}>Locations</a>
+          <div className="relative group">
+            <button className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-default ${isScrolled ? "text-slate-600" : "text-white/90"}`}>
+              Services <ChevronDown className="w-4 h-4" />
+            </button>
+            <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[220px]">
+                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Kitchen Remodeling</a>
+                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Bathroom Remodeling</a>
+                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Basement Remodeling</a>
+                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Trim Carpentry</a>
+                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Windows & Doors</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative group">
+            <button className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-default ${isScrolled ? "text-slate-600" : "text-white/90"}`}>
+              Locations <ChevronDown className="w-4 h-4" />
+            </button>
+            <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[200px]">
+                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Irwin, PA</a>
+                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Greensburg, PA</a>
+                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Murrysville, PA</a>
+                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Export, PA</a>
+                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">North Huntington, PA</a>
+                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Jeanette, PA</a>
+              </div>
+            </div>
+          </div>
+
           <a href="#contact" className={`font-medium hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-white/90"}`}>Contact</a>
-          <a 
-            href="tel:724-995-3320" 
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-bold transition-all ${
-              isScrolled 
-                ? "bg-primary text-white hover:bg-red-700" 
-                : "bg-white text-primary hover:bg-slate-100"
-            }`}
+          <a
+            href="tel:724-995-3320"
+            className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all shadow-lg ${isScrolled
+                ? "bg-primary text-white hover:bg-red-700 shadow-primary/20"
+                : "bg-white text-primary hover:bg-slate-100 shadow-white/10"
+              }`}
           >
             <Phone className="w-4 h-4" /> (724) 995-3320
           </a>
         </div>
 
-        <button 
+        <button
           className="md:hidden text-primary"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
