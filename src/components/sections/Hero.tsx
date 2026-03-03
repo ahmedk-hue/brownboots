@@ -7,15 +7,9 @@ import { LightBeams } from "../effects/LightBeams";
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-950 text-white pt-20">
-      {/* Background Image - Brighter and clearer */}
+      {/* Background with Decorative Elements */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80"
-          alt="Luxury Kitchen Remodel"
-          className="w-full h-full object-cover"
-        />
-        {/* Gradient Overlay for text readability, heavier on the left */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/70 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950" />
       </div>
 
       {/* Subtle Effects Layer */}

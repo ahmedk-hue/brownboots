@@ -54,7 +54,6 @@ const Irwin = () => {
             <LocationHero
                 city={city}
                 subtitle={`From the historic charm near the Lamp Theatre to the modern estates of Lincoln Hills, Sunset Valley, and Norwin Estates, we're your trusted neighborhood craftsmen.`}
-                image="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop"
             />
 
             <RelatedProjects city={city} />

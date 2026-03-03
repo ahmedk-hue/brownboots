@@ -54,7 +54,6 @@ const Murrysville = () => {
             <LocationHero
                 city={city}
                 subtitle={`From the iconic Tree Sign to the sprawling estates of Franklin Regional, we're building the future of ${city} one masterpiece at a time.`}
-                image="https://images.unsplash.com/photo-1599809275671-b59411bc485e?q=80&w=2070&auto=format&fit=crop"
             />
 
             <RelatedProjects city={city} />

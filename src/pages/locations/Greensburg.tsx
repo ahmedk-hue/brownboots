@@ -54,7 +54,6 @@ const Greensburg = () => {
             <LocationHero
                 city={city}
                 subtitle={`In the historic County Seat of Westmoreland, we're blending classic Greensburg charm with modern luxury from Academy Hill to Charter Oak.`}
-                image="https://images.unsplash.com/photo-1576013551627-0cfde31682a1?q=80&w=2070&auto=format&fit=crop"
             />
 
             <RelatedProjects city={city} />

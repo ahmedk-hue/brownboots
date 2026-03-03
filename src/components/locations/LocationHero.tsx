@@ -4,20 +4,14 @@ import { motion } from 'framer-motion';
 interface LocationHeroProps {
     city: string;
     subtitle: string;
-    image: string;
 }
 
-const LocationHero = ({ city, subtitle, image }: LocationHeroProps) => {
+const LocationHero = ({ city, subtitle }: LocationHeroProps) => {
     return (
-        <section className="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden">
-            {/* Background Image with Overlay */}
+        <section className="relative h-[60vh] min-h-[500px] flex items-center overflow-hidden bg-slate-950">
+            {/* Background with Decorative Elements */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src={image}
-                    alt={`${city} landmark`}
-                    className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-slate-950/70 backdrop-blur-[2px]"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950"></div>
                 {/* Decorative Grid Overlay to match brand */}
                 <div className="absolute inset-0 opacity-20">
                     <div className="grid grid-cols-6 grid-rows-6 h-full">

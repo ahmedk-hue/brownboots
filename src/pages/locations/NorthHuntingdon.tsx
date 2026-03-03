@@ -53,8 +53,7 @@ const NorthHuntingdon = () => {
 
             <LocationHero
                 city={city}
-                subtitle={`From the shores of Indian Lake to the sprawling estates of Lincoln Hills and Norwin, we're the premier choice for custom home transformations in ${city}.`}
-                image="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+                subtitle={`From the waterfront beauty of Indian Lake Point to the established neighborhoods of Penns Woods and Kerber Farms, we serve the entire Norwin community.`}
             />
 
             <RelatedProjects city={city} />

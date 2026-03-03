@@ -54,7 +54,6 @@ const Export = () => {
             <LocationHero
                 city={city}
                 subtitle={`Right at the heart of the Westmoreland Heritage Trail, we're providing the craftsmanship that keeps ${city} homes looking their best.`}
-                image="https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=2070&auto=format&fit=crop"
             />
 
             <RelatedProjects city={city} />

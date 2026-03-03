@@ -53,8 +53,7 @@ const Jeannette = () => {
 
             <LocationHero
                 city={city}
-                subtitle={`In 'The Glass City', we're bringing crystal-clear quality and craftsmanship to every home transformation from Clay Avenue to Jeannette South.`}
-                image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+                subtitle={`From the historic charm of Clay Avenue to the residential communities of Jeannette South and Arlington Ave, we're the City of Glass's trusted remodeling partners.`}
             />
 
             <RelatedProjects city={city} />
