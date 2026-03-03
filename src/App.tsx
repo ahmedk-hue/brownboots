@@ -18,6 +18,14 @@ import ServicesPage from "./pages/ServicesPage";
 import LocationsPage from "./pages/LocationsPage";
 import ContactPage from "./pages/ContactPage";
 
+// Location Pages
+import Irwin from "./pages/locations/Irwin";
+import Greensburg from "./pages/locations/Greensburg";
+import Murrysville from "./pages/locations/Murrysville";
+import Export from "./pages/locations/Export";
+import Jeannette from "./pages/locations/Jeannette";
+import NorthHuntingdon from "./pages/locations/NorthHuntingdon";
+
 const MainLayout = () => (
   <>
     <Hero />
@@ -45,6 +53,14 @@ export default function App() {
             <Route path="/services/basement-remodeling" element={<BasementRemodeling />} />
             <Route path="/services/trim-carpentry" element={<TrimCarpentry />} />
             <Route path="/services/windows-doors" element={<WindowDoorInstallation />} />
+
+            {/* Location Routes */}
+            <Route path="/locations/irwin" element={<Irwin />} />
+            <Route path="/locations/greensburg" element={<Greensburg />} />
+            <Route path="/locations/murrysville" element={<Murrysville />} />
+            <Route path="/locations/export" element={<Export />} />
+            <Route path="/locations/jeannette" element={<Jeannette />} />
+            <Route path="/locations/north-huntingdon" element={<NorthHuntingdon />} />
           </Routes>
         </main>
         <Footer />

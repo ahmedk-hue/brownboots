@@ -1,15 +1,16 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, CheckCircle2, Phone, Home, Users, ShieldCheck, Clock } from 'lucide-react';
+import { MapPin, CheckCircle2, Phone, Home, Users, ShieldCheck, Clock, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const locationsData = [
-    { name: "Irwin, PA", lat: 40.3340, lng: -79.7028 },
-    { name: "Greensburg, PA", lat: 40.3015, lng: -79.5389 },
-    { name: "Murrysville, PA", lat: 40.4212, lng: -79.6875 },
-    { name: "Export, PA", lat: 40.4187, lng: -79.6209 },
-    { name: "North Huntington, PA", lat: 40.3473, lng: -79.7428 },
-    { name: "Jeanette, PA", lat: 40.3281, lng: -79.6153 },
+    { name: "Irwin, PA", slug: "irwin", lat: 40.3340, lng: -79.7028 },
+    { name: "Greensburg, PA", slug: "greensburg", lat: 40.3015, lng: -79.5389 },
+    { name: "Murrysville, PA", slug: "murrysville", lat: 40.4212, lng: -79.6875 },
+    { name: "Export, PA", slug: "export", lat: 40.4187, lng: -79.6209 },
+    { name: "North Huntington, PA", slug: "north-huntingdon", lat: 40.3473, lng: -79.7428 },
+    { name: "Jeannette, PA", slug: "jeannette", lat: 40.3281, lng: -79.6153 },
 ];
 
 const LocationsPage = () => {
@@ -188,18 +189,25 @@ const LocationsPage = () => {
                         <div className="space-y-4 order-2 lg:order-1">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {locationsData.map((loc, index) => (
-                                    <button
-                                        key={index}
-                                        onClick={() => handleLocationClick(loc)}
-                                        className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between group hover:border-primary/20 transition-all hover:shadow-md text-left"
-                                    >
-                                        <div className="flex items-center gap-4">
-                                            <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                                                <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                                    <div key={index} className="flex flex-col gap-2">
+                                        <button
+                                            onClick={() => handleLocationClick(loc)}
+                                            className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between group hover:border-primary/20 transition-all hover:shadow-md text-left"
+                                        >
+                                            <div className="flex items-center gap-4">
+                                                <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                                                    <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                                                </div>
+                                                <span className="font-bold text-slate-800 text-lg">{loc.name}</span>
                                             </div>
-                                            <span className="font-bold text-slate-800 text-lg">{loc.name}</span>
-                                        </div>
-                                    </button>
+                                        </button>
+                                        <Link
+                                            to={`/locations/${loc.slug}`}
+                                            className="text-primary text-sm font-bold flex items-center gap-2 px-6 py-2 hover:translate-x-1 transition-transform"
+                                        >
+                                            View Local Expert Guide <ArrowRight className="w-4 h-4" />
+                                        </Link>
+                                    </div>
                                 ))}
                             </div>
                             <div className="mt-8 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm italic text-slate-600 text-sm text-center">
