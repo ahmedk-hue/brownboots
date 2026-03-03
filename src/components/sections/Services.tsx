@@ -1,48 +1,61 @@
-import { motion } from "motion/react";
-import { Hammer, Bath, Home, PenTool, DoorOpen } from "lucide-react";
+import { motion } from 'framer-motion';
+import { ChefHat, Bath, Box, Scaling, DoorOpen, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
     title: "Kitchen Remodeling",
-    description: "Transform your kitchen into a modern culinary space with custom cabinetry, countertops, and lighting.",
-    icon: <Hammer className="w-6 h-6 text-white" />,
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80"
+    description: "From custom cabinetry to modern layouts, we create kitchens that serve as the heart of your home.",
+    icon: ChefHat,
+    link: "/services/kitchen-remodeling",
+    features: ["Custom Cabinetry", "Quartz/Granite Counters", "Modern Lighting"]
   },
   {
     title: "Bathroom Remodeling",
-    description: "Create a spa-like retreat with luxurious fixtures, tile work, and efficient layouts.",
-    icon: <Bath className="w-6 h-6 text-white" />,
-    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80"
+    description: "Transform your dated bathroom into a luxury spa-like retreat with expert tile work and fixtures.",
+    icon: Bath,
+    link: "/services/bathroom-remodeling",
+    features: ["Custom Tile Showers", "Vanity Installation", "Space Optimization"]
   },
   {
     title: "Basement Remodeling",
-    description: "Expand your living space with a finished basement perfect for entertainment or a home office.",
-    icon: <Home className="w-6 h-6 text-white" />,
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80"
+    description: "Unlock the full potential of your home by converting your basement into a beautiful space.",
+    icon: Box,
+    link: "/services/basement-remodeling",
+    features: ["Finished Living Areas", "Home Offices", "Custom Bars"]
   },
   {
     title: "Trim Carpentry",
-    description: "Add elegance with custom crown molding, wainscoting, and detailed woodwork.",
-    icon: <PenTool className="w-6 h-6 text-white" />,
-    image: "https://images.unsplash.com/photo-1617251137884-7014b754357e?auto=format&fit=crop&q=80"
+    description: "The fine details that define a custom home. Master-class crown molding and built-ins.",
+    icon: Scaling,
+    link: "/services/trim-carpentry",
+    features: ["Crown Molding", "Custom Built-ins", "Decorative Trim"]
   },
   {
-    title: "Windows & Door Installation",
-    description: "Improve energy efficiency and curb appeal with professional window and door installation.",
-    icon: <DoorOpen className="w-6 h-6 text-white" />,
-    image: "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&q=80"
+    title: "Windows & Doors",
+    description: "Improve energy efficiency and curb appeal with precision-installed windows and doors.",
+    icon: DoorOpen,
+    link: "/services/windows-doors",
+    features: ["Energy Efficient", "Entry Systems", "Expert Sealing"]
   },
+  {
+    title: "General Repairs",
+    description: "Reliable solutions for your home's maintenance and repair needs, handled with care.",
+    icon: CheckCircle2,
+    link: "/services",
+    features: ["Small Repairs", "Interior Fixes", "General Maintenance"]
+  }
 ];
 
 export function Services() {
   return (
-    <section id="services" className="py-20 bg-white relative overflow-hidden">
+    <section id="services" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-2">Our Expertise</h2>
-          <h3 className="text-4xl font-display font-bold text-slate-900">Premium Remodeling Services</h3>
-          <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
-            From concept to completion, we deliver exceptional quality and attention to detail for every project.
+          <h2 className="text-primary font-bold tracking-wider uppercase text-sm mb-4">Our Expertise</h2>
+          <h3 className="text-4xl md:text-5xl font-display font-bold text-slate-900 tracking-tight">Premium Remodeling Services</h3>
+          <p className="text-slate-600 mt-6 max-w-2xl mx-auto text-lg leading-relaxed">
+            From precision repairs to complete transformations, we bring master-class craftsmanship to every corner of your home.
           </p>
         </div>
 
@@ -54,26 +67,41 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-slate-100 bg-white"
+              className="group bg-white rounded-2xl p-8 border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute top-4 right-4 w-12 h-12 bg-primary rounded-xl flex items-center justify-center shadow-lg z-10">
-                  {service.icon}
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60" />
+              <div className="w-14 h-14 bg-slate-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                <service.icon className="w-7 h-7 text-primary" />
               </div>
-              
-              <div className="p-8">
-                <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">{service.title}</h4>
-                <p className="text-slate-600 leading-relaxed">{service.description}</p>
-              </div>
+              <h4 className="text-2xl font-display font-bold text-slate-900 mb-4">{service.title}</h4>
+              <p className="text-slate-600 mb-6 line-clamp-2 italic">
+                "{service.description}"
+              </p>
+              <ul className="space-y-3 mb-8">
+                {service.features.map((feature, fidx) => (
+                  <li key={fidx} className="flex items-center gap-2 text-slate-700 font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to={service.link}
+                className="inline-flex items-center gap-2 font-bold text-primary group-hover:gap-3 transition-all"
+              >
+                Learn More <ArrowRight className="w-4 h-4" />
+              </Link>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-20 text-center">
+          <p className="text-slate-500 font-medium mb-6 italic">Looking for something specific?</p>
+          <Link
+            to="/services"
+            className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-black transition-all shadow-lg"
+          >
+            View All Services <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>
