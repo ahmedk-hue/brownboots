@@ -1,11 +1,12 @@
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          
+
           {/* Brand */}
           <div>
             <h3 className="text-white font-display font-bold text-xl mb-6">BrownBoot Repairs & Remodeling</h3>
@@ -45,11 +46,11 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6">Our Services</h4>
             <ul className="space-y-3">
-              <li><a href="#services" className="hover:text-white transition-colors">Kitchen Remodeling</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Bathroom Remodeling</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Basement Remodeling</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Trim Carpentry</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Windows & Doors</a></li>
+              <li><Link to="/services/kitchen-remodeling" className="hover:text-white transition-colors">Kitchen Remodeling</Link></li>
+              <li><Link to="/services/bathroom-remodeling" className="hover:text-white transition-colors">Bathroom Remodeling</Link></li>
+              <li><Link to="/services/basement-remodeling" className="hover:text-white transition-colors">Basement Remodeling</Link></li>
+              <li><Link to="/services/trim-carpentry" className="hover:text-white transition-colors">Trim Carpentry</Link></li>
+              <li><Link to="/services/windows-doors" className="hover:text-white transition-colors">Windows & Doors</Link></li>
             </ul>
           </div>
 
