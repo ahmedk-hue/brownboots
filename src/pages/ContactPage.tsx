@@ -29,14 +29,14 @@ const ContactPage = () => {
     };
 
     return (
-        <div className="pt-24 pb-16">
+        <div className="pb-16">
             <SEO
                 title="Contact Us | BrownBoot Repairs & Remodeling"
                 description="Get a free estimate for your remodeling project in Westmoreland County. Contact BrownBoot Repairs & Remodeling today for quality craftsmanship you can trust."
             />
 
             {/* Hero Section */}
-            <section className="bg-slate-950 text-white py-24 relative overflow-hidden">
+            <section className="bg-slate-950 text-white pt-32 pb-24 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-full h-full opacity-10">
                     <div className="grid grid-cols-6 grid-rows-6 h-full">
                         {Array.from({ length: 36 }).map((_, i) => (

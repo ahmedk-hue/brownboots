@@ -43,14 +43,14 @@ const ServicesPage = () => {
     ];
 
     return (
-        <div className="pt-24 pb-16">
+        <div className="pb-16">
             <SEO
                 title="Our Services | BrownBoot Repairs & Remodeling"
                 description="Explore our range of professional home remodeling services in Westmoreland County, PA. From kitchens to custom trim, we bring quality craftsmanship to every project."
             />
 
             {/* Hero Section */}
-            <section className="bg-slate-950 text-white py-24 relative overflow-hidden">
+            <section className="bg-slate-950 text-white pt-32 pb-24 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-full h-full opacity-10">
                     <div className="grid grid-cols-6 grid-rows-6 h-full">
                         {Array.from({ length: 36 }).map((_, i) => (
