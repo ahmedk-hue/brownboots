@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export function Navbar() {
+  const { pathname } = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // On subpages, we force the solid/dark styles so the navbar is visible against white backgrounds
+  const isHomepage = pathname === "/";
+  const shouldShowSolid = isScrolled || !isHomepage;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,18 +22,18 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${shouldShowSolid ? "bg-white/90 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
         }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="font-display font-bold text-2xl tracking-tighter">
-          <span className={isScrolled ? "text-slate-900" : "text-white"}>Brown</span>
+          <span className={shouldShowSolid ? "text-slate-900" : "text-white"}>Brown</span>
           <span className="text-primary">Boot</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
           <div className="relative group">
-            <Link to="/services" className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${isScrolled ? "text-slate-600" : "text-white/90"}`}>
+            <Link to="/services" className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>
               Services <ChevronDown className="w-4 h-4" />
             </Link>
             <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -43,7 +48,7 @@ export function Navbar() {
           </div>
 
           <div className="relative group">
-            <Link to="/locations" className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${isScrolled ? "text-slate-600" : "text-white/90"}`}>
+            <Link to="/locations" className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>
               Locations <ChevronDown className="w-4 h-4" />
             </Link>
             <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
@@ -58,10 +63,10 @@ export function Navbar() {
             </div>
           </div>
 
-          <a href="/#contact" className={`font-medium hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-white/90"}`}>Contact</a>
+          <a href="/#contact" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Contact</a>
           <a
             href="tel:724-995-3320"
-            className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all shadow-lg ${isScrolled
+            className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all shadow-lg ${shouldShowSolid
               ? "bg-primary text-white hover:bg-red-700 shadow-primary/20"
               : "bg-white text-primary hover:bg-slate-100 shadow-white/10"
               }`}
@@ -74,7 +79,7 @@ export function Navbar() {
           className="md:hidden text-primary"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X /> : <Menu className={isScrolled ? "text-slate-900" : "text-white"} />}
+          {isMobileMenuOpen ? <X /> : <Menu className={shouldShowSolid ? "text-slate-900" : "text-white"} />}
         </button>
       </div>
 
