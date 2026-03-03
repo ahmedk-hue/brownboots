@@ -15,71 +15,51 @@ const Irwin = () => {
 
     const faqs = [
         {
-            question: `What are the typical building permit timelines in ${city} Borough?`,
-            answer: `Timelines vary by project type, but most residential remodeling permits in Irwin Borough are processed within 2-3 weeks. Major structural additions involve a more rigorous review by the Planning & Zoning Department (Shari Martino's office) to ensure local code compliance.`
+            question: `How does the building permit process work in Irwin Borough vs. North Huntingdon?`,
+            answer: `While we serve the entire Norwin area, the processes differ. Irwin Borough handles its own zoning, while many surrounding addresses fall under North Huntingdon's jurisdiction. We coordinate directly with the respective municipal offices (including Shari Martino's office in Irwin) to ensure your project complies with the specific local codes of your street.`
         },
         {
-            question: `Which water authority serves homeowners in ${city}?`,
-            answer: `The majority of ${city} and North Irwin residences are served by the Municipal Authority of Westmoreland County (MAWC). We handle the necessary coordination for inspections if your remodeling project involves primary line adjustments or significant plumbing overhaul.`
+            question: `Does the clay-heavy soil in neighborhoods like Penns Woods affect remodeling?`,
+            answer: `Yes, the Westmoreland series silt loam in the Irwin area can have high clay content. This is a critical factor for additions and basement projects. We ensure all footings and drainage systems are engineered specifically for these local soil conditions to prevent settling.`
         },
         {
-            question: `Are there specific soil concerns for home additions in ${city}?`,
-            answer: `Irwin's landscape features a mix of well-drained loams and heavier "Alfisols" clay layers. For home additions or deck footings, we ensure precise engineering to account for the freeze-thaw cycles common in the Westmoreland series silt loams, preventing future settling.`
+            question: `Are you a registered contractor for MAWC service areas?`,
+            answer: `Absolutely. We work frequently within the Municipal Authority of Westmoreland County (MAWC) service area in Irwin. We handle all coordination for plumbing upgrades and new line segments as part of our full-service remodeling.`
         },
         {
-            question: `Does BrownBoot handle historic home remodeling in ${city}?`,
-            answer: `Absolutely. We take great pride in working on the historic "Biggest Little Town" homes near Main Street and Pennsylvania Avenue. We focus on maintaining the aesthetic integrity of 19th-century architecture while modernizing the systems and interiors.`
+            question: `Do you handle historic renovations near the Lamp Theatre?`,
+            answer: `Yes, we specialize in the unique structural needs of Irwin's older homes. Whether it's restoring crown molding in a Victorian-style home downtown or modernizing a kitchen in the Norwin area, we preserve the historic integrity while adding modern value.`
         }
-    ];
-
-    const localPoints = [
-        "MAWC Water Infrastructure Coordination",
-        "Irwin Borough Planning & Zoning Compliance",
-        "Historic Landmark Preservation Standards",
-        "Westmoreland Series Soil Mitigation",
-        "PA UCC (Uniform Construction Code) Adherence",
-        "Local Landmark Proximity (Lamp Theatre Area)"
     ];
 
     return (
         <>
             <SEO
-                title={`${fullCity} Remodeling & Repairs | BrownBoot`}
-                description={`Expert home remodeling in ${fullCity}. From historic Main Street renovations to modern bathroom overhauls, trust Irwin's local choice—BrownBoot Repairs & Remodeling.`}
+                title={`${fullCity} Expert Home Remodeling | BrownBoot`}
+                description={`Premium home remodeling in ${fullCity}. From historic downtown Irwin near the Lamp Theatre to modern renovations in Sunset Valley, Penns Woods, and Norwin Estates.`}
             />
 
             <LocationSchema
                 name={`BrownBoot Repairs & Remodeling - ${city}`}
-                description={`Premier home remodeler serving ${fullCity}. Specializing in kitchen and bathroom transformations in the Norwin area.`}
-                image="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=2072&auto=format&fit=crop" // Generic for now, landmarks preferred
-                url={`https://brownbootrr.com/locations/${city.toLowerCase()}`}
+                description={`Irwin's local remodeling experts. Specializing in custom kitchens, baths, and structural repairs across the Norwin area and historic Irwin.`}
+                image="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop"
+                url={`https://brownbootrr.com/locations/irwin`}
                 telephone="724-995-3320"
-                address={{
-                    streetAddress: "115 McMahon Dr.",
-                    addressLocality: "Manor",
-                    addressRegion: "PA",
-                    postalCode: "15665",
-                    addressCountry: "US"
-                }}
-                geo={{
-                    latitude: 40.3340,
-                    longitude: -79.7028
-                }}
-                areaServed={[
-                    { name: city, wikidataId: "Q2063858" },
-                    { name: "North Irwin" },
-                    { name: "Norwin" }
-                ]}
-                hasMap="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12173.8436402434!2d-79.713532!3d40.334032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834e94b7e19277f%3A0x6337a5be893c52e1!2sIrwin%2C%20PA%2015642!5e0!3m2!1sen!2sus!4v1709920000000!5m2!1sen!2sus"
+                address={{ streetAddress: "115 McMahon Dr.", addressLocality: "Manor", addressRegion: "PA", postalCode: "15665", addressCountry: "US" }}
+                geo={{ latitude: 40.3340, longitude: -79.7028 }}
+                areaServed={[{ name: city, wikidataId: "Q1017387" }]}
+                hasMap="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3043.374465804245!2d-79.7028!3d40.3340!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834ef1f79391ab1%3A0x6337a5be893c52e1!2sIrwin%2C%20PA!5e0!3m2!1sen!2sus!4v1709920000000!5m2!1sen!2sus"
             />
 
             <LocationHero
                 city={city}
-                subtitle={`From the historic storefronts of Main Street to the quiet neighborhoods of Norwin, we're building the future of ${city} one home at a time.`}
-                image="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=2072&auto=format&fit=crop"
+                subtitle={`From the historic charm near the Lamp Theatre to the modern estates of Lincoln Hills, Sunset Valley, and Norwin Estates, we're your trusted neighborhood craftsmen.`}
+                image="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop"
             />
 
-            {/* Local Context Section */}
+            <RelatedProjects city={city} />
+
+            {/* Hyper-Local Advantage Section */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -88,89 +68,98 @@ const Irwin = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <span className="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">The Local Advantage</span>
+                            <span className="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">The Irwin Expert Advantage</span>
                             <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-8 tracking-tight">
-                                Deep Roots in the {city} Community
+                                Deep Roots in the <span className="text-primary">Norwin Community</span>
                             </h2>
-                            <p className="text-lg text-slate-600 mb-8 leading-relaxed italic border-l-4 border-primary pl-6">
-                                "As a founder who grew up right here in Irwin, I know these neighborhoods better than anyone. We're not just contractors—we're your neighbors, committed to preserving the integrity of Norwin area homes."
+                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                                Remodeling in the Irwin area requires a contractor who understands the specific geological and municipal nuances of Westmoreland County. From the well-drained loams of <strong>Circleville</strong> to the complex zoning boundaries of <strong>North Huntingdon</strong> and the Borough, we bring the boots-on-the-ground knowledge your project deserves.
                             </p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {localPoints.map((point, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 text-slate-700 font-medium">
-                                        <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                                        {point}
-                                    </div>
-                                ))}
+
+                            <div className="space-y-4 mb-8">
+                                <div className="flex items-center gap-3 text-slate-800 font-bold">
+                                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                                    <span>Specialized Soil Mitigation (Westmoreland Series)</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-slate-800 font-bold">
+                                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                                    <span>Norwin School District Area Specialist</span>
+                                </div>
+                                <div className="flex items-center gap-3 text-slate-800 font-bold">
+                                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                                    <span>MAWC Infrastructure Coordination</span>
+                                </div>
                             </div>
+
+                            <p className="text-slate-600 italic border-l-4 border-primary pl-6 py-2">
+                                "Whether we're working on a historic brick Victorian near Main Street or a modern colonial in <strong>Penns Woods</strong>, our commitment to Irwin families is unwavering."
+                            </p>
                         </motion.div>
 
-                        <div className="relative">
-                            <div className="bg-slate-950 rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-                                <div className="relative z-10">
-                                    <h3 className="text-2xl font-display font-bold mb-6">Irwin Building Standards</h3>
-                                    <p className="text-slate-400 mb-8 leading-relaxed">
-                                        Navigating the <strong>Pennsylvania UCC</strong> and local <strong>Irwin Borough</strong> amendments requires a partner who knows the regional inspectors and code requirements inside and out.
-                                    </p>
-                                    <ul className="space-y-4 mb-10">
-                                        <li className="flex gap-4">
-                                            <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
-                                                <Landmark className="w-5 h-5 text-primary" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold">Norwin Historical District</h4>
-                                                <p className="text-sm text-slate-400 font-medium italic">Compliance with local preservation aesthetics.</p>
-                                            </div>
-                                        </li>
-                                        <li className="flex gap-4">
-                                            <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
-                                                <MapPin className="w-5 h-5 text-primary" />
-                                            </div>
-                                            <div>
-                                                <h4 className="font-bold">Soil & Grade Management</h4>
-                                                <p className="text-sm text-slate-400 font-medium italic">Engineering for Westmoreland series silt loam.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <Link
-                                        to="/contact"
-                                        className="inline-flex items-center gap-2 bg-primary text-white w-full justify-center py-4 rounded-xl font-bold hover:bg-red-700 transition-all font-display"
-                                    >
-                                        Start Your Irwin Project
-                                    </Link>
-                                </div>
+                        <div className="bg-slate-950 rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                            <div className="relative z-10">
+                                <h3 className="text-2xl font-display font-bold mb-6">Local Building Standards</h3>
+                                <p className="text-slate-400 mb-8 leading-relaxed">
+                                    We navigate the <strong>Pennsylvania UCC</strong> and local Borough amendments so you don't have to. Our familiarity with regional inspectors ensures a smooth process from permit to final inspection.
+                                </p>
+                                <ul className="space-y-4 mb-10">
+                                    <li className="flex gap-4">
+                                        <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                                            <Landmark className="w-5 h-5 text-primary" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold">Zoning Authority Knowledge</h4>
+                                            <p className="text-sm text-slate-400">Coordination with Irwin Borough & N. Huntingdon offices.</p>
+                                        </div>
+                                    </li>
+                                    <li className="flex gap-4">
+                                        <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                                            <MapPin className="w-5 h-5 text-primary" />
+                                        </div>
+                                        <div>
+                                            <h4 className="font-bold">Neighborhood Logistics</h4>
+                                            <p className="text-sm text-slate-400">Efficient staging for <strong>Sunset Valley</strong> & <strong>Lincoln Hills</strong> sites.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <Link
+                                    to="/contact"
+                                    className="inline-flex items-center gap-2 bg-primary text-white w-full justify-center py-4 rounded-xl font-bold hover:bg-red-700 transition-all font-display"
+                                >
+                                    Start Your Irwin Project
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <RelatedProjects city={city} />
-
             <LocalMap
                 city={city}
                 mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12173.8436402434!2d-79.713532!3d40.334032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834e94b7e19277f%3A0x6337a5be893c52e1!2sIrwin%2C%20PA%2015642!5e0!3m2!1sen!2sus!4v1709920000000!5m2!1sen!2sus"
                 directions={[
                     {
-                        from: "The Lamp Theatre / Main St",
-                        text: "We are active throughout the downtown area. If you're near Main Street, we're your local expert for historic interior remodeling."
+                        from: "The Lamp Theatre / Main Street",
+                        text: "We serve all the historic residences in the downtown Irwin corridor, bringing modern functionality to 19th-century architecture."
                     },
                     {
-                        from: "Hwy 30 / Norwin Town Center",
-                        text: "Just south of the Norwin Town Center, we serve all residential neighborhoods along the Pennsylvania Ave and 4th St corridors."
+                        from: "Norwin High School Area",
+                        text: "Just minutes from the high school, we're the go-to contractor for family home updates in <strong>Penns Woods</strong> and <strong>Norwin Estates</strong>."
                     }
                 ]}
             />
 
+            <ServiceFAQ faqs={faqs} title={`${city} Remodeling FAQ`} />
+
             {/* Local Conversion Guide */}
-            <section className="py-24 bg-white">
+            <section className="py-24 bg-slate-50">
                 <div className="container mx-auto px-4 max-w-4xl text-center">
-                    <div className="bg-slate-50 rounded-[3rem] p-12 md:p-20 border border-slate-100 shadow-sm relative overflow-hidden">
+                    <div className="bg-white rounded-[3rem] p-12 md:p-20 border border-slate-100 shadow-sm relative overflow-hidden">
                         <FileText className="w-16 h-16 text-primary mx-auto mb-8" />
                         <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">Planning a Remodel in {city}?</h2>
                         <p className="text-lg text-slate-600 mb-10">
-                            Don't start without the local data. Our <strong>{city} Homeowner's Guide</strong> includes current permit fee estimates and Norwin-area material delivery costs for 2025.
+                            Don't start without the local data. Our <strong>Irwin Homeowner's Guide</strong> includes current permit fee estimates and Norwin-area material delivery costs for 2025.
                         </p>
                         <Link
                             to="/contact"
@@ -181,8 +170,6 @@ const Irwin = () => {
                     </div>
                 </div>
             </section>
-
-            <ServiceFAQ faqs={faqs} title={`${city} Remodeling FAQ`} />
         </>
     );
 };
