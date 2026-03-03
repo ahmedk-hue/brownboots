@@ -1,13 +1,72 @@
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, CheckCircle2, Phone, Home, Users, ShieldCheck, Clock } from 'lucide-react';
 import SEO from '../components/SEO';
 
+const locationsData = [
+    { name: "Irwin, PA", lat: 40.3340, lng: -79.7028 },
+    { name: "Greensburg, PA", lat: 40.3015, lng: -79.5389 },
+    { name: "Murrysville, PA", lat: 40.4212, lng: -79.6875 },
+    { name: "Export, PA", lat: 40.4187, lng: -79.6209 },
+    { name: "North Huntington, PA", lat: 40.3473, lng: -79.7428 },
+    { name: "Jeanette, PA", lat: 40.3281, lng: -79.6153 },
+];
+
 const LocationsPage = () => {
-    const communities = [
-        "Irwin", "Greensburg", "Murrysville",
-        "Export", "North Huntington", "Jeanette",
-        "Penn Trafford", "Delmont", "Harrison City"
-    ];
+    const mapRef = useRef<HTMLDivElement>(null);
+    const mapInstance = useRef<any>(null);
+    const markersRef = useRef<{ [key: string]: any }>({});
+
+    useEffect(() => {
+        if (typeof window !== "undefined" && (window as any).L && mapRef.current && !mapInstance.current) {
+            const L = (window as any).L;
+
+            mapInstance.current = L.map(mapRef.current, {
+                scrollWheelZoom: true
+            }).setView([40.34, -79.63], 11);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mapInstance.current);
+
+            L.circle([40.34, -79.63], {
+                color: '#FE0000',
+                fillColor: '#FE0000',
+                fillOpacity: 0.1,
+                radius: 12000
+            }).addTo(mapInstance.current);
+
+            locationsData.forEach(loc => {
+                const marker = L.marker([loc.lat, loc.lng]).addTo(mapInstance.current);
+                marker.bindPopup(`<b>${loc.name}</b><br>Our Service Area`);
+                markersRef.current[loc.name] = marker;
+            });
+        }
+
+        return () => {
+            if (mapInstance.current) {
+                mapInstance.current.remove();
+                mapInstance.current = null;
+            }
+        };
+    }, []);
+
+    const handleLocationClick = (loc: any) => {
+        if (mapInstance.current && markersRef.current[loc.name]) {
+            mapInstance.current.setView([loc.lat, loc.lng], 13, {
+                animate: true,
+                duration: 1
+            });
+            markersRef.current[loc.name].openPopup();
+
+            // Scroll to map on small screens
+            if (window.innerWidth < 1024) {
+                mapRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    };
+
+    const additionalTowns = ["Penn Trafford", "Delmont", "Harrison City"];
 
     return (
         <div className="pt-24 pb-16">
@@ -116,45 +175,55 @@ const LocationsPage = () => {
                 </div>
             </section>
 
-            {/* Communities Grid Section */}
+            {/* Communities Grid Section with Map */}
             <section className="py-24 bg-slate-50 border-y border-slate-100">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">Communities We Proudly Serve</h2>
                         <p className="text-lg text-slate-600">
-                            Based in Manor, PA, our primary service area includes a 15-20 mile radius. We take pride in revitalizing homes across these Westmoreland County communities.
+                            Based in Manor, PA, our primary service area includes a 15-20 mile radius. Click a community below to see it on our interactive area map.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {communities.map((community, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.05 }}
-                                className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between group hover:border-primary/20 transition-all hover:shadow-md"
-                            >
-                                <div className="flex items-center gap-4">
-                                    <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
-                                        <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+                        <div className="space-y-4 order-2 lg:order-1">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {locationsData.map((loc, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => handleLocationClick(loc)}
+                                        className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between group hover:border-primary/20 transition-all hover:shadow-md text-left"
+                                    >
+                                        <div className="flex items-center gap-4">
+                                            <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
+                                                <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                                            </div>
+                                            <span className="font-bold text-slate-800 text-lg">{loc.name}</span>
+                                        </div>
+                                    </button>
+                                ))}
+                                {additionalTowns.map((town, index) => (
+                                    <div
+                                        key={index + 100}
+                                        className="bg-slate-50/50 p-6 rounded-2xl border border-dashed border-slate-200 flex items-center gap-4"
+                                    >
+                                        <MapPin className="w-5 h-5 text-slate-400" />
+                                        <span className="font-bold text-slate-500 text-lg">{town}, PA</span>
                                     </div>
-                                    <span className="font-bold text-slate-800 text-lg">{community}, PA</span>
-                                </div>
-                                <span className="text-xs font-bold text-slate-400 group-hover:text-primary transition-colors">Service Area</span>
-                            </motion.div>
-                        ))}
-                    </div>
+                                ))}
+                            </div>
+                            <div className="mt-8 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm italic text-slate-600 text-sm text-center">
+                                Don't see your town? We occasionally travel beyond our primary radius for specialized remodeling projects.
+                                <a href="tel:724-995-3320" className="text-primary font-bold ml-1 hover:underline">Inquire here →</a>
+                            </div>
+                        </div>
 
-                    <div className="mt-16 text-center">
-                        <p className="text-slate-500 mb-4 font-medium italic">Don't see your town listed?</p>
-                        <p className="text-slate-600 max-w-xl mx-auto mb-8">
-                            We occasionally travel beyond our primary radius for specialized remodeling projects.
-                        </p>
-                        <a href="tel:724-995-3320" className="text-primary font-bold hover:underline inline-flex items-center gap-2">
-                            Check Availability For Your Area <MapPin className="w-4 h-4" />
-                        </a>
+                        <div className="relative min-h-[400px] lg:min-h-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white group order-1 lg:order-2">
+                            <div ref={mapRef} className="absolute inset-0 z-0 bg-slate-200" />
+                            <div className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-slate-100 text-xs font-bold text-slate-600 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                                Scroll to Zoom • Click Communities to Locate
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
