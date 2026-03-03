@@ -66,7 +66,6 @@ const LocationsPage = () => {
         }
     };
 
-    const additionalTowns = ["Penn Trafford", "Delmont", "Harrison City"];
 
     return (
         <div className="pt-24 pb-16">
@@ -201,15 +200,6 @@ const LocationsPage = () => {
                                             <span className="font-bold text-slate-800 text-lg">{loc.name}</span>
                                         </div>
                                     </button>
-                                ))}
-                                {additionalTowns.map((town, index) => (
-                                    <div
-                                        key={index + 100}
-                                        className="bg-slate-50/50 p-6 rounded-2xl border border-dashed border-slate-200 flex items-center gap-4"
-                                    >
-                                        <MapPin className="w-5 h-5 text-slate-400" />
-                                        <span className="font-bold text-slate-500 text-lg">{town}, PA</span>
-                                    </div>
                                 ))}
                             </div>
                             <div className="mt-8 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm italic text-slate-600 text-sm text-center">
