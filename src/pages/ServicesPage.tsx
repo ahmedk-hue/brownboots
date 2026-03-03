@@ -50,18 +50,26 @@ const ServicesPage = () => {
             />
 
             {/* Hero Section */}
-            <section className="bg-slate-50 py-20 border-b border-slate-100">
-                <div className="container mx-auto px-4">
+            <section className="bg-slate-950 text-white py-24 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-full h-full opacity-10">
+                    <div className="grid grid-cols-6 grid-rows-6 h-full">
+                        {Array.from({ length: 36 }).map((_, i) => (
+                            <div key={i} className="border-[0.5px] border-white/20"></div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="container mx-auto px-4 relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="max-w-3xl"
                     >
                         <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Craftsmanship First</span>
-                        <h1 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6 tracking-tight">
+                        <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight">
                             Our Remodeling <span className="text-primary">Services</span>
                         </h1>
-                        <p className="text-xl text-slate-600 leading-relaxed">
+                        <p className="text-xl text-slate-400 leading-relaxed">
                             We specialize in high-quality home transformations across Westmoreland County. Each project is handled with precision, care, and a commitment to longevity.
                         </p>
                     </motion.div>
