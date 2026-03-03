@@ -53,12 +53,12 @@ export function Navbar() {
             </Link>
             <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
               <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[200px]">
-                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Irwin, PA</Link>
-                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Greensburg, PA</Link>
-                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Murrysville, PA</Link>
-                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Export, PA</Link>
-                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">North Huntington, PA</Link>
-                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Jeanette, PA</Link>
+                <Link to="/locations/irwin" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Irwin, PA</Link>
+                <Link to="/locations/greensburg" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Greensburg, PA</Link>
+                <Link to="/locations/murrysville" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Murrysville, PA</Link>
+                <Link to="/locations/export" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Export, PA</Link>
+                <Link to="/locations/north-huntingdon" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">North Huntingdon, PA</Link>
+                <Link to="/locations/jeannette" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Jeannette, PA</Link>
               </div>
             </div>
           </div>
@@ -97,7 +97,20 @@ export function Navbar() {
               <Link to="/services/basement-remodeling" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Basement Remodeling</Link>
               <Link to="/services/trim-carpentry" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Trim Carpentry</Link>
               <Link to="/services/windows-doors" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Windows & Doors</Link>
-              <Link to="/contact" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+
+              <div className="pt-4 border-t border-slate-50">
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2 block">Our Locations</span>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2">
+                  <Link to="/locations/irwin" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Irwin</Link>
+                  <Link to="/locations/greensburg" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Greensburg</Link>
+                  <Link to="/locations/murrysville" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Murrysville</Link>
+                  <Link to="/locations/export" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Export</Link>
+                  <Link to="/locations/north-huntingdon" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>N. Huntingdon</Link>
+                  <Link to="/locations/jeannette" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Jeannette</Link>
+                </div>
+              </div>
+
+              <Link to="/contact" className="text-lg font-medium text-slate-900 pt-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
               <a href="tel:724-995-3320" className="text-lg font-bold text-primary flex items-center gap-2">
                 <Phone className="w-5 h-5" /> (724) 995-3320
               </a>
