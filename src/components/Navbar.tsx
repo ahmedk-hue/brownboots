@@ -28,9 +28,9 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-8">
           <div className="relative group">
-            <button className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-default ${isScrolled ? "text-slate-600" : "text-white/90"}`}>
+            <Link to="/services" className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${isScrolled ? "text-slate-600" : "text-white/90"}`}>
               Services <ChevronDown className="w-4 h-4" />
-            </button>
+            </Link>
             <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
               <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[220px]">
                 <Link to="/services/kitchen-remodeling" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Kitchen Remodeling</Link>
@@ -43,17 +43,17 @@ export function Navbar() {
           </div>
 
           <div className="relative group">
-            <button className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-default ${isScrolled ? "text-slate-600" : "text-white/90"}`}>
+            <Link to="/locations" className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${isScrolled ? "text-slate-600" : "text-white/90"}`}>
               Locations <ChevronDown className="w-4 h-4" />
-            </button>
+            </Link>
             <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
               <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[200px]">
-                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Irwin, PA</a>
-                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Greensburg, PA</a>
-                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Murrysville, PA</a>
-                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Export, PA</a>
-                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">North Huntington, PA</a>
-                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Jeanette, PA</a>
+                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Irwin, PA</Link>
+                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Greensburg, PA</Link>
+                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Murrysville, PA</Link>
+                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Export, PA</Link>
+                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">North Huntington, PA</Link>
+                <Link to="/locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Jeanette, PA</Link>
               </div>
             </div>
           </div>

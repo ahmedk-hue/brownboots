@@ -14,6 +14,8 @@ import BathroomRemodeling from "./pages/services/BathroomRemodeling";
 import BasementRemodeling from "./pages/services/BasementRemodeling";
 import TrimCarpentry from "./pages/services/TrimCarpentry";
 import WindowDoorInstallation from "./pages/services/WindowDoorInstallation";
+import ServicesPage from "./pages/ServicesPage";
+import LocationsPage from "./pages/LocationsPage";
 
 const MainLayout = () => (
   <>
@@ -34,6 +36,8 @@ export default function App() {
         <main>
           <Routes>
             <Route path="/" element={<MainLayout />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/locations" element={<LocationsPage />} />
             <Route path="/services/kitchen-remodeling" element={<KitchenRemodeling />} />
             <Route path="/services/bathroom-remodeling" element={<BathroomRemodeling />} />
             <Route path="/services/basement-remodeling" element={<BasementRemodeling />} />
