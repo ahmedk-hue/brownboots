@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,10 +21,10 @@ export function Navbar() {
         }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="font-display font-bold text-2xl tracking-tighter">
+        <Link to="/" className="font-display font-bold text-2xl tracking-tighter">
           <span className={isScrolled ? "text-slate-900" : "text-white"}>Brown</span>
           <span className="text-primary">Boot</span>
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           <div className="relative group">
@@ -32,11 +33,11 @@ export function Navbar() {
             </button>
             <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
               <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[220px]">
-                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Kitchen Remodeling</a>
-                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Bathroom Remodeling</a>
-                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Basement Remodeling</a>
-                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Trim Carpentry</a>
-                <a href="#services" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Windows & Doors</a>
+                <Link to="/services/kitchen-remodeling" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Kitchen Remodeling</Link>
+                <Link to="/services/bathroom-remodeling" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Bathroom Remodeling</Link>
+                <Link to="/services/basement-remodeling" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Basement Remodeling</Link>
+                <Link to="/services/trim-carpentry" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Trim Carpentry</Link>
+                <Link to="/services/windows-doors" className="block px-4 py-3 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium">Windows & Doors</Link>
               </div>
             </div>
           </div>
@@ -47,22 +48,22 @@ export function Navbar() {
             </button>
             <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
               <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[200px]">
-                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Irwin, PA</a>
-                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Greensburg, PA</a>
-                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Murrysville, PA</a>
-                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Export, PA</a>
-                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">North Huntington, PA</a>
-                <a href="#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Jeanette, PA</a>
+                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Irwin, PA</a>
+                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Greensburg, PA</a>
+                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Murrysville, PA</a>
+                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Export, PA</a>
+                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">North Huntington, PA</a>
+                <a href="/#locations" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Jeanette, PA</a>
               </div>
             </div>
           </div>
 
-          <a href="#contact" className={`font-medium hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-white/90"}`}>Contact</a>
+          <a href="/#contact" className={`font-medium hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-white/90"}`}>Contact</a>
           <a
             href="tel:724-995-3320"
             className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all shadow-lg ${isScrolled
-                ? "bg-primary text-white hover:bg-red-700 shadow-primary/20"
-                : "bg-white text-primary hover:bg-slate-100 shadow-white/10"
+              ? "bg-primary text-white hover:bg-red-700 shadow-primary/20"
+              : "bg-white text-primary hover:bg-slate-100 shadow-white/10"
               }`}
           >
             <Phone className="w-4 h-4" /> (724) 995-3320
@@ -86,9 +87,12 @@ export function Navbar() {
             className="md:hidden bg-white border-t border-slate-100 overflow-hidden"
           >
             <div className="container mx-auto px-4 py-8 flex flex-col gap-4">
-              <a href="#services" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
-              <a href="#locations" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Locations</a>
-              <a href="#contact" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+              <Link to="/services/kitchen-remodeling" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Kitchen Remodeling</Link>
+              <Link to="/services/bathroom-remodeling" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Bathroom Remodeling</Link>
+              <Link to="/services/basement-remodeling" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Basement Remodeling</Link>
+              <Link to="/services/trim-carpentry" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Trim Carpentry</Link>
+              <Link to="/services/windows-doors" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Windows & Doors</Link>
+              <a href="/#contact" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
               <a href="tel:724-995-3320" className="text-lg font-bold text-primary flex items-center gap-2">
                 <Phone className="w-5 h-5" /> (724) 995-3320
               </a>

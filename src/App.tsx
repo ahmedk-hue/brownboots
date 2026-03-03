@@ -1,8 +1,4 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/sections/Hero";
 import { Services } from "./components/sections/Services";
@@ -11,18 +7,40 @@ import { Locations } from "./components/sections/Locations";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
 
+// Service Pages
+import KitchenRemodeling from "./pages/services/KitchenRemodeling";
+import BathroomRemodeling from "./pages/services/BathroomRemodeling";
+import BasementRemodeling from "./pages/services/BasementRemodeling";
+import TrimCarpentry from "./pages/services/TrimCarpentry";
+import WindowDoorInstallation from "./pages/services/WindowDoorInstallation";
+
+const MainLayout = () => (
+  <>
+    <Hero />
+    <Services />
+    <Gallery />
+    <Locations />
+    <Contact />
+  </>
+);
+
 export default function App() {
   return (
-    <div className="font-sans text-slate-900 bg-white selection:bg-primary/20 selection:text-primary">
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <Gallery />
-        <Locations />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="font-sans text-slate-900 bg-white selection:bg-primary/20 selection:text-primary">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<MainLayout />} />
+            <Route path="/services/kitchen-remodeling" element={<KitchenRemodeling />} />
+            <Route path="/services/bathroom-remodeling" element={<BathroomRemodeling />} />
+            <Route path="/services/basement-remodeling" element={<BasementRemodeling />} />
+            <Route path="/services/trim-carpentry" element={<TrimCarpentry />} />
+            <Route path="/services/windows-doors" element={<WindowDoorInstallation />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
