@@ -120,7 +120,7 @@ const LocationsPage = () => {
             <section className="py-24 bg-slate-50 border-y border-slate-100">
                 <div className="container mx-auto px-4">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">Where We Work</h2>
+                        <h2 className="text-3xl font-display font-bold text-slate-900 mb-6">Communities We Proudly Serve</h2>
                         <p className="text-lg text-slate-600">
                             Based in Manor, PA, our primary service area includes a 15-20 mile radius. We take pride in revitalizing homes across these Westmoreland County communities.
                         </p>
