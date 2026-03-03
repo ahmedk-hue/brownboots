@@ -63,7 +63,7 @@ export function Navbar() {
             </div>
           </div>
 
-          <a href="/#contact" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Contact</a>
+          <Link to="/contact" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Contact</Link>
           <a
             href="tel:724-995-3320"
             className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all shadow-lg ${shouldShowSolid
@@ -97,7 +97,7 @@ export function Navbar() {
               <Link to="/services/basement-remodeling" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Basement Remodeling</Link>
               <Link to="/services/trim-carpentry" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Trim Carpentry</Link>
               <Link to="/services/windows-doors" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Windows & Doors</Link>
-              <a href="/#contact" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Contact</a>
+              <Link to="/contact" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
               <a href="tel:724-995-3320" className="text-lg font-bold text-primary flex items-center gap-2">
                 <Phone className="w-5 h-5" /> (724) 995-3320
               </a>

@@ -16,6 +16,7 @@ import TrimCarpentry from "./pages/services/TrimCarpentry";
 import WindowDoorInstallation from "./pages/services/WindowDoorInstallation";
 import ServicesPage from "./pages/ServicesPage";
 import LocationsPage from "./pages/LocationsPage";
+import ContactPage from "./pages/ContactPage";
 
 const MainLayout = () => (
   <>
@@ -38,6 +39,7 @@ export default function App() {
             <Route path="/" element={<MainLayout />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/locations" element={<LocationsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="/services/kitchen-remodeling" element={<KitchenRemodeling />} />
             <Route path="/services/bathroom-remodeling" element={<BathroomRemodeling />} />
             <Route path="/services/basement-remodeling" element={<BasementRemodeling />} />
