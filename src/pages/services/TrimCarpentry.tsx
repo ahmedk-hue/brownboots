@@ -20,30 +20,29 @@ const TrimCarpentry = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-slate-900">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="https://images.unsplash.com/photo-1516156008625-3a9d60da923c?q=80&w=1974&auto=format&fit=crop"
-                        alt="Fine Finish Carpentry"
-                        className="w-full h-full object-cover opacity-60"
-                    />
+            <section className="bg-slate-950 text-white py-32 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-full h-full opacity-10">
+                    <div className="grid grid-cols-6 grid-rows-6 h-full">
+                        {Array.from({ length: 36 }).map((_, i) => (
+                            <div key={i} className="border-[0.5px] border-white/20"></div>
+                        ))}
+                    </div>
                 </div>
-                <div className="container mx-auto px-6 relative z-10 text-center">
-                    <motion.h1
+
+                <div className="container mx-auto px-4 relative z-10 text-center">
+                    <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-6xl font-serif font-bold text-white mb-6"
+                        className="max-w-3xl mx-auto"
                     >
-                        Master-Class Trim Carpentry
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-xl text-slate-200 max-w-2xl mx-auto mb-8"
-                    >
-                        The beauty is in the details. Elevate your home with precision trim work and custom wood features.
-                    </motion.p>
+                        <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Master-Class Craftsmanship</span>
+                        <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-tight">
+                            Premium <span className="text-primary">Trim Carpentry</span>
+                        </h1>
+                        <p className="text-xl text-slate-400 leading-relaxed">
+                            The beauty is in the details. Elevate your home with precision trim work and custom wood features.
+                        </p>
+                    </motion.div>
                 </div>
             </section>
 
