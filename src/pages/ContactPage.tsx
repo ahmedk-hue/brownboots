@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, CheckCircle, Download, Facebook, Instagram } from 'lucide-react';
 import { useState, type FormEvent, type ChangeEvent } from 'react';
 import SEO from '../components/SEO';
+import { AnimatedGradient } from '../components/effects/AnimatedGradient';
+import { Particles } from '../components/effects/Particles';
+import { LightBeams } from '../components/effects/LightBeams';
 
 const ContactPage = () => {
     const [formState, setFormState] = useState({
@@ -37,11 +40,22 @@ const ContactPage = () => {
 
             {/* Hero Section */}
             <section className="bg-slate-950 text-white pt-32 pb-24 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-full h-full opacity-10">
-                    <div className="grid grid-cols-6 grid-rows-6 h-full">
-                        {Array.from({ length: 36 }).map((_, i) => (
-                            <div key={i} className="border-[0.5px] border-white/20"></div>
-                        ))}
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950" />
+
+                    {/* Premium Effects Layer */}
+                    <div className="absolute inset-0 opacity-30 pointer-events-none">
+                        <AnimatedGradient />
+                        <Particles />
+                        <LightBeams />
+                    </div>
+
+                    <div className="absolute inset-0 opacity-10">
+                        <div className="grid grid-cols-6 grid-rows-6 h-full">
+                            {Array.from({ length: 36 }).map((_, i) => (
+                                <div key={i} className="border-[0.5px] border-white/20"></div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
@@ -52,8 +66,8 @@ const ContactPage = () => {
                         className="max-w-3xl"
                     >
                         <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Let's Build Something Together</span>
-                        <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight">
-                            Start Your <span className="text-primary">Project</span>
+                        <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight leading-tight">
+                            Start Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary">Project</span>
                         </h1>
                         <p className="text-xl text-slate-400 leading-relaxed">
                             Ready to transform your home? Reach out today for a consultation. We're proud to serve Westmoreland County with integrity and precision.

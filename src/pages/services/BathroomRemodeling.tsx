@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
 import { Bath, CheckCircle2, ArrowRight } from 'lucide-react';
 import SEO from '../../components/SEO';
+import { AnimatedGradient } from '../../components/effects/AnimatedGradient';
+import { Particles } from '../../components/effects/Particles';
+import { LightBeams } from '../../components/effects/LightBeams';
 
 const BathroomRemodeling = () => {
     const items = [
@@ -20,12 +23,23 @@ const BathroomRemodeling = () => {
             />
 
             {/* Hero Section */}
-            <section className="bg-slate-950 text-white pt-32 pb-24 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-full h-full opacity-10">
-                    <div className="grid grid-cols-6 grid-rows-6 h-full">
-                        {Array.from({ length: 36 }).map((_, i) => (
-                            <div key={i} className="border-[0.5px] border-white/20"></div>
-                        ))}
+            <section className="bg-slate-950 text-white pt-32 pb-24 relative overflow-hidden text-center">
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950" />
+
+                    {/* Premium Effects Layer */}
+                    <div className="absolute inset-0 opacity-30 pointer-events-none">
+                        <AnimatedGradient />
+                        <Particles />
+                        <LightBeams />
+                    </div>
+
+                    <div className="absolute inset-0 opacity-10">
+                        <div className="grid grid-cols-6 grid-rows-6 h-full">
+                            {Array.from({ length: 36 }).map((_, i) => (
+                                <div key={i} className="border-[0.5px] border-white/20"></div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
@@ -36,8 +50,8 @@ const BathroomRemodeling = () => {
                         className="max-w-3xl mx-auto"
                     >
                         <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Master-Class Craftsmanship</span>
-                        <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-tight">
-                            Luxury Bathroom <span className="text-primary">Remodeling</span>
+                        <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 tracking-tight leading-tight">
+                            Luxury Bathroom <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary">Remodeling</span>
                         </h1>
                         <p className="text-xl text-slate-400 leading-relaxed">
                             Transform your bathroom into a private sanctuary with our expert design-build services.

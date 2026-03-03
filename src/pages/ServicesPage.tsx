@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { ChefHat, Bath, Box, Scaling, DoorOpen, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { AnimatedGradient } from '../components/effects/AnimatedGradient';
+import { Particles } from '../components/effects/Particles';
+import { LightBeams } from '../components/effects/LightBeams';
 
 const ServicesPage = () => {
     const services = [
@@ -51,11 +54,22 @@ const ServicesPage = () => {
 
             {/* Hero Section */}
             <section className="bg-slate-950 text-white pt-32 pb-24 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-full h-full opacity-10">
-                    <div className="grid grid-cols-6 grid-rows-6 h-full">
-                        {Array.from({ length: 36 }).map((_, i) => (
-                            <div key={i} className="border-[0.5px] border-white/20"></div>
-                        ))}
+                <div className="absolute inset-0 z-0">
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950" />
+
+                    {/* Premium Effects Layer */}
+                    <div className="absolute inset-0 opacity-30 pointer-events-none">
+                        <AnimatedGradient />
+                        <Particles />
+                        <LightBeams />
+                    </div>
+
+                    <div className="absolute inset-0 opacity-10">
+                        <div className="grid grid-cols-6 grid-rows-6 h-full">
+                            {Array.from({ length: 36 }).map((_, i) => (
+                                <div key={i} className="border-[0.5px] border-white/20"></div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
@@ -66,8 +80,8 @@ const ServicesPage = () => {
                         className="max-w-3xl"
                     >
                         <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">Craftsmanship First</span>
-                        <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight">
-                            Our Remodeling <span className="text-primary">Services</span>
+                        <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 tracking-tight leading-tight">
+                            Our Remodeling <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary">Services</span>
                         </h1>
                         <p className="text-xl text-slate-400 leading-relaxed">
                             We specialize in high-quality home transformations across Westmoreland County. Each project is handled with precision, care, and a commitment to longevity.

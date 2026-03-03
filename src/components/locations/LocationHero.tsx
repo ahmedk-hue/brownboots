@@ -1,5 +1,8 @@
 
 import { motion } from 'framer-motion';
+import { AnimatedGradient } from '../effects/AnimatedGradient';
+import { Particles } from '../effects/Particles';
+import { LightBeams } from '../effects/LightBeams';
 
 interface LocationHeroProps {
     city: string;
@@ -12,6 +15,14 @@ const LocationHero = ({ city, subtitle }: LocationHeroProps) => {
             {/* Background with Decorative Elements */}
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950"></div>
+
+                {/* Premium Effects Layer */}
+                <div className="absolute inset-0 opacity-30 pointer-events-none">
+                    <AnimatedGradient />
+                    <Particles />
+                    <LightBeams />
+                </div>
+
                 {/* Decorative Grid Overlay to match brand */}
                 <div className="absolute inset-0 opacity-20">
                     <div className="grid grid-cols-6 grid-rows-6 h-full">
@@ -32,8 +43,8 @@ const LocationHero = ({ city, subtitle }: LocationHeroProps) => {
                     <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">
                         Now Serving {city}, PA
                     </span>
-                    <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 tracking-tight">
-                        BrownBoot Repairs & Remodeling - <span className="text-primary">{city}</span>
+                    <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 tracking-tight leading-tight">
+                        BrownBoot Repairs & Remodeling - <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary">{city}</span>
                     </h1>
                     <p className="text-xl text-slate-200 leading-relaxed max-w-2xl">
                         {subtitle}
