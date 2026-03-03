@@ -1,13 +1,72 @@
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, CheckCircle2, Phone, Home } from 'lucide-react';
 import SEO from '../components/SEO';
 
+const locationsData = [
+    { name: "Irwin, PA", lat: 40.3340, lng: -79.7028 },
+    { name: "Greensburg, PA", lat: 40.3015, lng: -79.5389 },
+    { name: "Murrysville, PA", lat: 40.4212, lng: -79.6875 },
+    { name: "Export, PA", lat: 40.4187, lng: -79.6209 },
+    { name: "North Huntington, PA", lat: 40.3473, lng: -79.7428 },
+    { name: "Jeanette, PA", lat: 40.3281, lng: -79.6153 },
+];
+
 const LocationsPage = () => {
-    const locations = [
-        "Irwin", "Greensburg", "Murrysville",
-        "Export", "North Huntington", "Jeanette",
-        "Penn Trafford", "Delmont", "Harrison City"
-    ];
+    const mapRef = useRef<HTMLDivElement>(null);
+    const mapInstance = useRef<any>(null);
+    const markersRef = useRef<{ [key: string]: any }>({});
+
+    useEffect(() => {
+        if (typeof window !== "undefined" && (window as any).L && mapRef.current && !mapInstance.current) {
+            const L = (window as any).L;
+
+            mapInstance.current = L.map(mapRef.current, {
+                scrollWheelZoom: true
+            }).setView([40.34, -79.63], 11);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(mapInstance.current);
+
+            L.circle([40.34, -79.63], {
+                color: '#FE0000',
+                fillColor: '#FE0000',
+                fillOpacity: 0.1,
+                radius: 12000
+            }).addTo(mapInstance.current);
+
+            locationsData.forEach(loc => {
+                const marker = L.marker([loc.lat, loc.lng]).addTo(mapInstance.current);
+                marker.bindPopup(`<b>${loc.name}</b><br>Our Service Area`);
+                markersRef.current[loc.name] = marker;
+            });
+        }
+
+        return () => {
+            if (mapInstance.current) {
+                mapInstance.current.remove();
+                mapInstance.current = null;
+            }
+        };
+    }, []);
+
+    const handleLocationClick = (loc: any) => {
+        if (mapInstance.current && markersRef.current[loc.name]) {
+            mapInstance.current.setView([loc.lat, loc.lng], 13, {
+                animate: true,
+                duration: 1
+            });
+            markersRef.current[loc.name].openPopup();
+
+            // Scroll to map on small screens
+            if (window.innerWidth < 1024) {
+                mapRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    };
+
+    const additionalTowns = ["Penn Trafford", "Delmont", "Harrison City"];
 
     return (
         <div className="pt-24 pb-16">
@@ -37,80 +96,95 @@ const LocationsPage = () => {
                             Areas We <span className="text-primary">Serve</span>
                         </h1>
                         <p className="text-xl text-slate-400 leading-relaxed">
-                            Based in Manor, PA, we are your local experts for high-quality repairs and remodeling. We focus our expertise on the communities that make Westmoreland County home.
+                            Based in Manor, PA, we are your local experts for high-quality repairs and remodeling. Click a location below to view it on our interactive map.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* Locations Grid */}
-            <section className="py-24">
+            {/* Interactive Map Section */}
+            <section className="py-24 bg-slate-50 border-b border-slate-100">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
+                        <div className="relative min-h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                            <div ref={mapRef} className="absolute inset-0 z-0 bg-slate-200" />
+                            <div className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-slate-100 text-xs font-bold text-slate-600 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity">
+                                Scroll to Zoom • Drag to Move
+                            </div>
+                        </div>
+
                         <div>
-                            <h2 className="text-3xl font-display font-bold text-slate-900 mb-8">Homegrown Service</h2>
-                            <p className="text-lg text-slate-600 mb-12 leading-relaxed italic">
-                                "At BrownBoot, we don't just work in these neighborhoods—we live here. Being local means we understand the specific needs of Westmoreland County homes and building standards."
+                            <h2 className="text-3xl font-display font-bold text-slate-900 mb-8 tracking-tight">Interactive Service Map</h2>
+                            <p className="text-lg text-slate-600 mb-10 leading-relaxed italic">
+                                "At BrownBoot, we don't just work in these neighborhoods—we live here. Being local means we understand the specific needs of Westmoreland County homes."
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {locations.map((loc, index) => (
-                                    <motion.div
+                                {locationsData.map((loc, index) => (
+                                    <button
                                         key={index}
-                                        initial={{ opacity: 0, x: -10 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: index * 0.05 }}
-                                        className="flex items-center gap-3 bg-slate-50 p-4 rounded-xl border border-slate-100"
+                                        onClick={() => handleLocationClick(loc)}
+                                        className="flex items-center gap-4 p-5 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-primary/30 transition-all text-left group"
                                     >
-                                        <MapPin className="w-5 h-5 text-primary shrink-0" />
-                                        <span className="font-bold text-slate-800">{loc}, PA</span>
-                                    </motion.div>
+                                        <div className="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center group-hover:bg-primary transition-all">
+                                            <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <span className="font-bold text-slate-800 group-hover:text-primary transition-colors">{loc.name}</span>
+                                            <span className="text-xs text-slate-500 font-medium">Click to view</span>
+                                        </div>
+                                    </button>
+                                ))}
+                                {additionalTowns.map((town, index) => (
+                                    <div
+                                        key={index + 100}
+                                        className="flex items-center gap-4 p-5 bg-slate-50/50 rounded-xl border border-dashed border-slate-200"
+                                    >
+                                        <MapPin className="w-5 h-5 text-slate-400" />
+                                        <span className="font-bold text-slate-500">{town}, PA</span>
+                                    </div>
                                 ))}
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
 
-                        <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-2xl relative">
-                            <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
-                            <div className="relative z-10">
-                                <h3 className="text-2xl font-display font-bold text-slate-900 mb-6">Why Choose Local?</h3>
-                                <div className="space-y-6">
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                                            <Home className="w-6 h-6 text-primary" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 mb-1">Community Knowledge</h4>
-                                            <p className="text-slate-600 italic text-sm">Understanding local architecture and community standards.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                                            <CheckCircle2 className="w-6 h-6 text-primary" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 mb-1">Faster Response</h4>
-                                            <p className="text-slate-600 italic text-sm">Being nearby allows for more consistent scheduling and follow-ups.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
-                                            <Phone className="w-6 h-6 text-primary" />
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold text-slate-900 mb-1">Accountability</h4>
-                                            <p className="text-slate-600 italic text-sm">Our reputation is built on the word of our neighbors.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="mt-12 p-6 bg-slate-50 rounded-2xl text-center">
-                                    <p className="text-slate-900 font-bold mb-4 italic">Don't see your town?</p>
-                                    <p className="text-slate-600 text-sm mb-6">We often travel to surrounding areas within a 30-minute radius of Manor, PA.</p>
-                                    <a href="tel:724-995-3320" className="text-primary font-bold hover:underline">Inquire About Your Area →</a>
-                                </div>
-                            </div>
+            {/* Why Choose Local Section */}
+            <section className="py-24">
+                <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg">
+                            <Home className="w-10 h-10 text-primary mb-6" />
+                            <h3 className="text-xl font-bold text-slate-900 mb-4">Community Knowledge</h3>
+                            <p className="text-slate-600">Deep understanding of local architecture and building standards in Westmoreland County.</p>
                         </div>
+                        <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg">
+                            <CheckCircle2 className="w-10 h-10 text-primary mb-6" />
+                            <h3 className="text-xl font-bold text-slate-900 mb-4">Faster Response</h3>
+                            <p className="text-slate-600">Proximity allows for efficient scheduling and high-priority customer support.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg">
+                            <Phone className="w-10 h-10 text-primary mb-6" />
+                            <h3 className="text-xl font-bold text-slate-900 mb-4">Accountability</h3>
+                            <p className="text-slate-600">We take pride in our reputation among our neighbors and community members.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="container mx-auto px-4 pb-16 text-center">
+                <div className="bg-slate-900 rounded-3xl p-12 md:p-20 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+                    <div className="relative z-10">
+                        <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">Ready to start your local project?</h2>
+                        <a
+                            href="tel:724-995-3320"
+                            className="inline-flex items-center gap-2 bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20"
+                        >
+                            Call (724) 995-3320
+                        </a>
                     </div>
                 </div>
             </section>
