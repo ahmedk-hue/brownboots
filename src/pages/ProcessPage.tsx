@@ -17,7 +17,7 @@ const steps = [
         name: "Detailed Estimate",
         description: "Transparency is key. We'll provide a comprehensive quote back to you within 2-3 days of our visit, ensuring no surprises down the line.",
         icon: <ClipboardCheck className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1503387762-592eda58efaf?auto=format&fit=crop&q=80",
+        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80",
         details: ["Itemized pricing", "Material options", "Project timeline", "Clear contract terms"]
     },
     {
