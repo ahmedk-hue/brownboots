@@ -9,7 +9,14 @@ export function Footer() {
 
           {/* Brand */}
           <div>
-            <h3 className="text-white font-display font-bold text-xl mb-6">BrownBoot Repairs & Remodeling</h3>
+            <Link to="/" className="inline-block mb-6">
+              <img
+                src="/logo-primary.png"
+                alt="BrownBoot Logo"
+                className="h-20 w-auto"
+              />
+            </Link>
+            <h3 className="text-white font-display font-bold text-lg mb-2">BrownBoot Repairs & Remodeling</h3>
             <p className="mb-6 leading-relaxed">
               Trusted by Westmoreland County homeowners. Built to last. We bring quality craftsmanship to every project.
             </p>
