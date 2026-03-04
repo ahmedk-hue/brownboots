@@ -7,6 +7,7 @@ import { Locations } from "./components/sections/Locations";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/sections/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import SEO from "./components/SEO";
 
 // Service Pages
 import KitchenRemodeling from "./pages/services/KitchenRemodeling";
@@ -32,6 +33,11 @@ import NorthHuntingdon from "./pages/locations/NorthHuntingdon";
 
 const MainLayout = () => (
   <>
+    <SEO
+      title="BrownBoot Repairs & Remodeling | Home Remodeling Irwin PA"
+      description="Westmoreland County's trusted home repair and remodeling experts. Specializing in luxury kitchens, finished basements, and custom trim. Local, honest service."
+      canonical="https://brownbootrr.com/"
+    />
     <Hero />
     <Services />
     <Gallery />
