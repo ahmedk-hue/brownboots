@@ -11,9 +11,9 @@ interface LocationHeroProps {
 
 const LocationHero = ({ city, subtitle }: LocationHeroProps) => {
     return (
-        <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-slate-950 py-24 md:py-32">
+        <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-slate-950 py-32 md:py-48">
             {/* Background with Decorative Elements */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 text-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950"></div>
 
                 {/* Premium Effects Layer */}
@@ -33,32 +33,33 @@ const LocationHero = ({ city, subtitle }: LocationHeroProps) => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 relative z-10 pt-20">
+            <div className="container mx-auto px-4 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="max-w-3xl"
+                    className="max-w-4xl"
                 >
-                    <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block">
+                    <span className="text-primary font-bold tracking-wider uppercase text-sm mb-4 block underline decoration-primary/30 underline-offset-8">
                         Now Serving {city}, PA
                     </span>
-                    <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 tracking-tight leading-tight">
-                        BrownBoot Repairs & Remodeling - <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary">{city}</span>
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 tracking-tight leading-[1.1]">
+                        BrownBoot Repairs & Remodeling - <br className="hidden md:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary">{city}</span>
                     </h1>
-                    <p className="text-xl text-slate-200 leading-relaxed max-w-2xl">
+                    <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mb-10">
                         {subtitle}
                     </p>
-                    <div className="mt-10 flex flex-wrap gap-4">
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                         <a
                             href="tel:724-995-3320"
-                            className="bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all shadow-lg shadow-primary/20"
+                            className="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20 text-center"
                         >
                             Call (724) 995-3320
                         </a>
                         <a
                             href="#contact"
-                            className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 transition-all font-display"
+                            className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all font-display text-center"
                         >
                             Get Local Estimate
                         </a>

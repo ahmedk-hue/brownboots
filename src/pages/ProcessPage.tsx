@@ -10,7 +10,7 @@ const steps = [
         name: "Free Home Visit",
         description: "Our process begins with a personal assessment of your project. We offer a 24-48 hour response time to schedule your initial consultation.",
         icon: <Calendar className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80",
+        image: "/about-kyle.png",
         details: ["Project scope discussion", "Initial measurements", "Budget alignment", "Owner-led consultation"]
     },
     {
@@ -24,21 +24,21 @@ const steps = [
         name: "Selection & Planning",
         description: "We help you pick finishes and handle the logistics. From material samples to local permits, we set the stage for a perfect build.",
         icon: <PencilRuler className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80",
+        image: "/gallery-trim.png",
         details: ["Material source assistance", "Structural reviews", "Local permit filing", "Project schedule finalization"]
     },
     {
         name: "Precision Construction",
         description: "Our team brings your vision to life with precision and respect for your home. We maintain a clean, safe job site throughout the build.",
         icon: <HardHat className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80",
+        image: "/gallery-basement.png",
         details: ["Skilled craftsmanship", "Daily clean-up", "Progress updates", "Structural integrity focus"]
     },
     {
         name: "Final Walkthrough",
         description: "We don't consider the job done until you're completely satisfied. We'll walk through every detail together to ensure perfection.",
         icon: <CheckCircle className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
+        image: "/gallery-kitchen.png",
         details: ["Final inspection", "Detail touch-ups", "Maintenance guidance", "Project sign-off"]
     }
 ];

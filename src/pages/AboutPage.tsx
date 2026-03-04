@@ -141,8 +141,10 @@ const AboutPage = () => {
                                 viewport={{ once: true }}
                                 className="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all group"
                             >
-                                <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                                    <div className="text-primary group-hover:text-white transition-colors">{value.icon}</div>
+                                <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-all duration-300">
+                                    <div className="text-primary group-hover:text-white transition-colors duration-300">
+                                        {value.icon}
+                                    </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-4">{value.title}</h3>
                                 <p className="text-slate-600 leading-relaxed">{value.desc}</p>
