@@ -11,6 +11,7 @@ const AboutPage = () => {
             <SEO
                 title="About Kyle Stack & BrownBoot | Trusted Westmoreland County Remodeler"
                 description="Meet Kyle Stack, founder of BrownBoot Repairs & Remodeling. Discover our local roots in Manor, PA and our commitment to quality craftsmanship and integrity."
+                keywords="Kyle Stack, BrownBoot Repairs, Westmoreland County Remodeler, Manor PA Contractor, Honest Home Remodeling"
             />
 
             {/* Hero Section */}

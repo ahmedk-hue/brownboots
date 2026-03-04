@@ -36,6 +36,7 @@ const ContactPage = () => {
             <SEO
                 title="Contact Us | BrownBoot Repairs & Remodeling"
                 description="Get a free estimate for your remodeling project in Westmoreland County. Contact BrownBoot Repairs & Remodeling today for quality craftsmanship you can trust."
+                keywords="Contact BrownBoot, Free Remodeling Estimate, Home Remodeling Consultation, Westmoreland County Contractor"
             />
 
             {/* Hero Section */}

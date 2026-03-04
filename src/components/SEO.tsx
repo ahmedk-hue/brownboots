@@ -3,14 +3,16 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 interface SEOProps {
     title: string;
     description: string;
+    keywords?: string;
     canonical?: string;
 }
 
-const SEO = ({ title, description, canonical }: SEOProps) => {
+const SEO = ({ title, description, keywords, canonical }: SEOProps) => {
     return (
         <Helmet>
             <title>{title}</title>
             <meta name="description" content={description} />
+            {keywords && <meta name="keywords" content={keywords} />}
             {canonical && <link rel="canonical" href={canonical} />}
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />

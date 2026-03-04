@@ -36,7 +36,8 @@ const NorthHuntingdon = () => {
         <>
             <SEO
                 title={`${fullCity} Expert Home Remodeling | BrownBoot`}
-                description={`Premium home remodeling in ${fullCity}. From luxury kitchen transformations in Indian Lake Point to custom additions in Penns Woods and Lincoln Hills.`}
+                description={`Premium home remodeling in ${fullCity}. Trusted local experts for kitchens, baths, and custom trim work in neighborhoods across North Huntingdon.`}
+                keywords={`North Huntingdon PA Remodeling, Home Repair North Huntingdon, Kitchen Remodel North Huntingdon PA, Bathroom Renovation North Huntingdon, ${fullCity} Contractor`}
             />
 
             <LocationSchema

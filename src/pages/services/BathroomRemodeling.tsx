@@ -9,8 +9,9 @@ const BathroomRemodeling = () => {
     return (
         <div className="bg-white">
             <SEO
-                title="Bathroom Repair and Remodel | Westmoreland County - BrownBoot"
-                description="Approachable bathroom repair and remodeling in Irwin, Greensburg, and Manor. Founder-led, honest pricing, and built to last. Free estimates in 48 hours."
+                title="Bathroom Remodeling Irwin PA | Luxury Bath Renovations"
+                description="Transform your bathroom into a spa-like retreat. Expert tile work, custom vanities, and premium fixtures for homeowners in Greensburg and Irwin."
+                keywords="Bathroom Remodeling Irwin, Luxury Bath Renovations Greensburg, Custom Shower Installation, Bathroom Design Westmoreland County"
                 canonical="https://brownbootrr.com/services/bathroom-remodeling"
             />
 

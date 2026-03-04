@@ -11,6 +11,7 @@ const PartnershipsPage = () => {
             <SEO
                 title="Professional Partnerships | Realtor & Trade Incentives"
                 description="Partner with Westmoreland County's trusted remodeler. We offer 3% commissions for Realtors and Net-15 payment terms for local trades."
+                keywords="Construction Partnerships, Realtor Referral Program PA, Trade Contractors Westmoreland County, BrownBoot Partners"
             />
 
             {/* Hero Section */}

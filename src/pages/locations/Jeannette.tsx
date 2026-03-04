@@ -36,7 +36,8 @@ const Jeannette = () => {
         <>
             <SEO
                 title={`${fullCity} Expert Home Remodeling | BrownBoot`}
-                description={`Quality home remodeling in 'The Glass City'—${fullCity}. From historic Clay Avenue renovations to modern transformations in Jeannette South.`}
+                description={`Premium home remodeling in ${fullCity}. Transparent pricing and precision craftsmanship for kitchen, bathroom, and basement projects.`}
+                keywords={`Jeannette PA Remodeling, Home Repair Jeannette, Kitchen Remodel Jeannette PA, Bathroom Renovation Jeannette, ${fullCity} Contractor`}
             />
 
             <LocationSchema

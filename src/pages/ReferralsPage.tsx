@@ -11,6 +11,7 @@ const ReferralsPage = () => {
             <SEO
                 title="Referral Program | Reward Your Support"
                 description="Join the BrownBoot Referral Program. Earn 3% cash rewards on every remodeling project you refer to us in Westmoreland County."
+                keywords="Referral Program, Home Remodeling Rewards, Earn Cash for Referrals, BrownBoot Community"
             />
 
             {/* Hero Section */}

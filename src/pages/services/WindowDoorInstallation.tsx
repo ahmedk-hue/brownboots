@@ -9,9 +9,10 @@ const WindowDoorInstallation = () => {
     return (
         <div className="bg-white">
             <SEO
-                title="Window & Door Installation | Westmoreland County - BrownBoot"
-                description="Approachable window and door installation in Irwin, Greensburg, and Murrysville. Founder-led, honest pricing, and built to last. Free estimates in 48 hours."
-                canonical="https://brownbootrr.com/services/window-door-installation"
+                title="Windows & Doors Installation | Irwin PA"
+                description="Improve your home's curb appeal and energy efficiency. Expert installation of entry doors and replacement windows across Westmoreland County."
+                keywords="Window Installation Irwin, Entry Door Replacement Greensburg, Energy Efficient Windows PA, Door Installation Westmoreland County"
+                canonical="https://brownbootrr.com/services/windows-doors"
             />
 
             {/* Hero Section */}

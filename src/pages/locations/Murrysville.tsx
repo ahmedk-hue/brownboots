@@ -35,8 +35,9 @@ const Murrysville = () => {
     return (
         <>
             <SEO
-                title={`${fullCity} Quality Home Remodeling | BrownBoot`}
-                description={`Premium home remodeling in ${fullCity}. From the historic Tree Sign landmark to custom renovations in Franklin Estates and Murrysville Heights.`}
+                title={`${fullCity} Expert Home Remodeling | BrownBoot`}
+                description={`Premium home remodeling in ${fullCity}. Specializing in luxury kitchens, master baths, and custom home transformations throughout the Norwin area.`}
+                keywords={`Murrysville PA Remodeling, Home Repair Murrysville, Kitchen Remodel Murrysville PA, Bathroom Renovation Murrysville, ${fullCity} Contractor`}
             />
 
             <LocationSchema

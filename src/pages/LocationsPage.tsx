@@ -76,6 +76,7 @@ const LocationsPage = () => {
             <SEO
                 title="Service Areas | BrownBoot Repairs & Remodeling"
                 description="Proudly serving Westmoreland County, PA. Discover the BrownBoot difference in Irwin, Greensburg, Murrysville, and surrounding communities."
+                keywords="Remodeling Service Areas, Irwin PA Remodeler, Greensburg Contractor, Murrysville Home Improvement"
             />
 
             {/* Hero Section */}

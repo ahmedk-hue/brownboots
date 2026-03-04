@@ -37,6 +37,7 @@ const Irwin = () => {
             <SEO
                 title={`${fullCity} Expert Home Remodeling | BrownBoot`}
                 description={`Premium home remodeling in ${fullCity}. From historic downtown Irwin near the Lamp Theatre to modern renovations in Sunset Valley, Penns Woods, and Norwin Estates.`}
+                keywords={`Irwin PA Remodeling, Home Repair Irwin, Kitchen Remodel Irwin PA, Bathroom Renovation Irwin, ${fullCity} Contractor`}
             />
 
             <LocationSchema

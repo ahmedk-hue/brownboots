@@ -9,8 +9,9 @@ const BasementRemodeling = () => {
     return (
         <div className="bg-white">
             <SEO
-                title="Basement Remodeling & Design | Westmoreland County - BrownBoot"
-                description="Approachable basement remodeling in Irwin, Greensburg, and Murrysville. Founder-led, honest pricing, and built to last. Free estimates in 48 hours."
+                title="Basement Remodeling Irwin PA | Finished Basements"
+                description="Unlock your home's potential. We specialize in turning Westmoreland County basements into beautiful living areas, home offices, and guest suites."
+                keywords="Basement Remodeling Irwin, Finished Basements Greensburg, Lower Level Renovations PA, Basement Finishing Westmoreland County"
                 canonical="https://brownbootrr.com/services/basement-remodeling"
             />
 

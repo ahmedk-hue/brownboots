@@ -35,8 +35,9 @@ const Greensburg = () => {
     return (
         <>
             <SEO
-                title={`${fullCity} Quality Home Remodeling | BrownBoot`}
-                description={`Premium home remodeling in ${fullCity}. From historic Academy Hill estates to modern transformations in Charter Oak and Saybrook Village.`}
+                title={`${fullCity} Expert Home Remodeling | BrownBoot`}
+                description={`Premium home remodeling in ${fullCity}. Award-winning craftsmanship for historic homes and new developments across the Westmoreland area.`}
+                keywords={`Greensburg PA Remodeling, Home Repair Greensburg, Kitchen Remodel Greensburg PA, Bathroom Renovation Greensburg, ${fullCity} Contractor`}
             />
 
             <LocationSchema

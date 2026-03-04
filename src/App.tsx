@@ -36,6 +36,7 @@ const MainLayout = () => (
     <SEO
       title="BrownBoot Repairs & Remodeling | Home Remodeling Irwin PA"
       description="Westmoreland County's trusted home repair and remodeling experts. Specializing in luxury kitchens, finished basements, and custom trim. Local, honest service."
+      keywords="Home Remodeling Irwin PA, Kitchen Remodeling Greensburg, Basement Finishing Westmoreland County, Bathroom Renovations, Home Repair Manor PA"
       canonical="https://brownbootrr.com/"
     />
     <Hero />

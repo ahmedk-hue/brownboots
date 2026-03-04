@@ -9,8 +9,9 @@ const KitchenRemodeling = () => {
     return (
         <div className="bg-white">
             <SEO
-                title="Kitchen Remodeling & Repair | Westmoreland County - BrownBoot"
-                description="Approachable kitchen remodeling in Irwin, Greensburg, and Murrysville. Founder-led, honest pricing, and built to last. Get your free estimate in 48 hours."
+                title="Kitchen Remodeling Irwin PA | Custom Kitchen Design"
+                description="Elevate your home with Westmoreland County's premier kitchen remodeler. Luxury custom cabinetry, quartz countertops, and modern layouts designed for longevity."
+                keywords="Kitchen Remodeling Irwin, Custom Kitchen Design Greensburg, Modern Kitchen Renovations PA, Kitchen Design Westmoreland County"
                 canonical="https://brownbootrr.com/services/kitchen-remodeling"
             />
 

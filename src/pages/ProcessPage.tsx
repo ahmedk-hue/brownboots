@@ -47,8 +47,9 @@ const ProcessPage = () => {
     return (
         <div className="pb-16 text-slate-900">
             <SEO
-                title="Our Remodeling Process | The BrownBoot Way"
-                description="Discover our systematic 5-step approach to home remodeling in Westmoreland County. From free home visits to final walkthroughs, we prioritize quality."
+                title="Our Process | The BrownBoot Way"
+                description="Experience a stress-free remodeling journey. From the initial 48-hour estimate to the final walkthrough, discover how we prioritize your home and your time."
+                keywords="Remodeling Process, Construction Timeline, Home Renovation Steps, BrownBoot Way, Estimate to Completion"
             />
 
             {/* Hero Section */}

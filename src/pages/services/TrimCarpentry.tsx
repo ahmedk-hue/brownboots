@@ -9,8 +9,9 @@ const TrimCarpentry = () => {
     return (
         <div className="bg-white">
             <SEO
-                title="Trim Carpentry & Custom Millwork | Westmoreland County - BrownBoot"
-                description="Approachable trim carpentry and custom millwork in Irwin, Greensburg, and Manor. Founder-led, honest pricing, and built to last. Free estimates in 48 hours."
+                title="Trim Carpentry & Custom Built-ins | Irwin PA"
+                description="Master-class finish carpentry in Westmoreland County. From elegant crown molding to custom library shelving, we add the details that make a home."
+                keywords="Trim Carpentry Irwin, Custom Built-ins Greensburg, Crown Molding Installation PA, Finish Carpentry Westmoreland County"
                 canonical="https://brownbootrr.com/services/trim-carpentry"
             />
 

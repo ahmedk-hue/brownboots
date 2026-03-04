@@ -50,6 +50,7 @@ const ServicesPage = () => {
             <SEO
                 title="Our Services | BrownBoot Repairs & Remodeling"
                 description="Explore our range of professional home remodeling services in Westmoreland County, PA. From kitchens to custom trim, we bring quality craftsmanship to every project."
+                keywords="Home Remodeling Services, Kitchen Remodeling, Bathroom Renovations, Basement Finishing, Trim Carpentry, Window Installation"
             />
 
             {/* Hero Section */}

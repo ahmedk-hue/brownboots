@@ -35,8 +35,9 @@ const Export = () => {
     return (
         <>
             <SEO
-                title={`${fullCity} Quality Home Remodeling | BrownBoot`}
-                description={`Reliable home remodeling and repairs in ${fullCity}. From Heritage Trail neighborhoods to historic Manordale Farms homes, we're Export's trusted local choice.`}
+                title={`${fullCity} Expert Home Remodeling | BrownBoot`}
+                description={`Premium home remodeling in ${fullCity}. Local craftsmen dedicated to quality kitchen, bath, and structural repairs in the heart of Export.`}
+                keywords={`Export PA Remodeling, Home Repair Export, Kitchen Remodel Export PA, Bathroom Renovation Export, ${fullCity} Contractor`}
             />
 
             <LocationSchema
