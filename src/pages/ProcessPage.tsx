@@ -10,30 +10,35 @@ const steps = [
         name: "Free Home Visit",
         description: "Our process begins with a personal assessment of your project. We offer a 24-48 hour response time to schedule your initial consultation.",
         icon: <Calendar className="w-8 h-8" />,
+        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80",
         details: ["Project scope discussion", "Initial measurements", "Budget alignment", "Owner-led consultation"]
     },
     {
         name: "Detailed Estimate",
         description: "Transparency is key. We'll provide a comprehensive quote back to you within 2-3 days of our visit, ensuring no surprises down the line.",
         icon: <ClipboardCheck className="w-8 h-8" />,
+        image: "https://images.unsplash.com/photo-1503387762-592eda58efaf?auto=format&fit=crop&q=80",
         details: ["Itemized pricing", "Material options", "Project timeline", "Clear contract terms"]
     },
     {
-        name: "Selections & Permitting",
-        description: "We handle the logistics. From final material selections to ensuring all necessary local permits are in place, we set the stage for success.",
+        name: "Selection & Planning",
+        description: "We help you pick finishes and handle the logistics. From material samples to local permits, we set the stage for a perfect build.",
         icon: <PencilRuler className="w-8 h-8" />,
+        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80",
         details: ["Material source assistance", "Structural reviews", "Local permit filing", "Project schedule finalization"]
     },
     {
-        name: "Execution & Construction",
+        name: "Precision Construction",
         description: "Our team brings your vision to life with precision and respect for your home. We maintain a clean, safe job site throughout the build.",
         icon: <HardHat className="w-8 h-8" />,
+        image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80",
         details: ["Skilled craftsmanship", "Daily clean-up", "Progress updates", "Structural integrity focus"]
     },
     {
         name: "Final Walkthrough",
         description: "We don't consider the job done until you're completely satisfied. We'll walk through every detail together to ensure perfection.",
         icon: <CheckCircle className="w-8 h-8" />,
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
         details: ["Final inspection", "Detail touch-ups", "Maintenance guidance", "Project sign-off"]
     }
 ];
@@ -119,11 +124,13 @@ const ProcessPage = () => {
                                     viewport={{ once: true }}
                                     className="w-full lg:w-1/2"
                                 >
-                                    <div className="aspect-video bg-slate-50 rounded-3xl border border-slate-100 flex items-center justify-center shadow-inner group overflow-hidden relative">
-                                        <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors" />
-                                        <div className="text-slate-200 group-hover:text-primary/20 transition-all group-hover:scale-110">
-                                            {step.icon}
-                                        </div>
+                                    <div className="aspect-video bg-slate-100 rounded-3xl overflow-hidden shadow-2xl border-8 border-white group relative">
+                                        <img
+                                            src={step.image}
+                                            alt={step.name}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
                                 </motion.div>
                             </div>
