@@ -2,34 +2,29 @@ import { motion } from "motion/react";
 
 const projects = [
   {
-    image: "https://images.unsplash.com/photo-1484154218962-a1c002085aac?auto=format&fit=crop&q=80",
-    title: "Modern Kitchen Overhaul",
+    image: "/gallery-kitchen.png",
+    title: "Gourmet Kitchen Transformation",
     category: "Kitchen Remodeling"
   },
   {
-    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80",
-    title: "Luxury Master Bath",
+    image: "/gallery-bathroom.png",
+    title: "Luxury Master Suite Bath",
     category: "Bathroom Remodeling"
   },
   {
-    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80",
-    title: "Open Concept Living",
-    category: "Interior Renovation"
+    image: "/gallery-basement.png",
+    title: "Finished Basement Lounge",
+    category: "Basement Remodeling"
   },
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80",
-    title: "Custom Deck & Patio",
-    category: "Outdoor Living"
+    image: "/gallery-trim.png",
+    title: "Custom Crown & Baseboard",
+    category: "Trim Carpentry"
   },
   {
-    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80",
-    title: "Basement Home Theater",
-    category: "Basement Finishing"
-  },
-  {
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&q=80",
-    title: "Entryway & Door Install",
-    category: "Windows & Doors"
+    image: "/gallery-windows.png",
+    title: "Premium Window & Door Install",
+    category: "Windows & Door Installation"
   }
 ];
 
@@ -55,8 +50,8 @@ export function Gallery() {
               transition={{ delay: index * 0.1 }}
               className="group relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer"
             >
-              <img 
-                src={project.image} 
+              <img
+                src={project.image}
                 alt={project.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"

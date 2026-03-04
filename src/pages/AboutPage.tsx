@@ -51,14 +51,14 @@ const AboutPage = () => {
                             viewport={{ once: true }}
                             className="relative"
                         >
-                            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-slate-100 flex items-center justify-center border-8 border-white">
-                                <div className="text-slate-300 text-center p-12">
-                                    <User className="w-32 h-32 mx-auto mb-6 opacity-20" />
-                                    <p className="font-display font-bold text-xl">Kyle Stack</p>
-                                    <p className="text-sm">Founder & Lead Remodeler</p>
-                                </div>
+                            <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border-8 border-white group">
+                                <img
+                                    src="/about-kyle.png"
+                                    alt="Kyle Stack - Founder of BrownBoot"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
                             </div>
-                            <div className="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-3xl shadow-xl hidden md:block">
+                            <div className="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-3xl shadow-xl hidden md:block z-20">
                                 <p className="text-3xl font-display font-bold">15+</p>
                                 <p className="text-sm font-medium opacity-90">Years Experience</p>
                             </div>
