@@ -112,9 +112,9 @@ Lead Magnet (Value Exchange)
 
 \- Logo Files: [Logo Files](https://drive.google.com/drive/folders/1kf4GyN2CXqLNAkdzATN-84S3InW0PWJo?usp=sharing)
 
-\- Project Photos: Waiting
+\- Project Photos: [Project Photos](https://drive.google.com/drive/folders/1Uj3mXiZHlNYOtpGlllrMPyzMi79HXnjM?usp=drive_link)
 
-\- Team Headshots: Waiting
+\- Team Headshots: [Owner Image](https://drive.google.com/drive/folders/1P0H5-rb_OVzBJ1oSOG9owpyqZe-Nzvsk?usp=drive_link)
 
 ### **6\. Copywriting "Vibe"**
 

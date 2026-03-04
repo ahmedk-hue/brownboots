@@ -17,6 +17,10 @@ import WindowDoorInstallation from "./pages/services/WindowDoorInstallation";
 import ServicesPage from "./pages/ServicesPage";
 import LocationsPage from "./pages/LocationsPage";
 import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
+import ProcessPage from "./pages/ProcessPage";
+import PartnershipsPage from "./pages/PartnershipsPage";
+import ReferralsPage from "./pages/ReferralsPage";
 
 // Location Pages
 import Irwin from "./pages/locations/Irwin";
@@ -48,6 +52,10 @@ export default function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/locations" element={<LocationsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/process" element={<ProcessPage />} />
+            <Route path="/partnerships" element={<PartnershipsPage />} />
+            <Route path="/referrals" element={<ReferralsPage />} />
             <Route path="/services/kitchen-remodeling" element={<KitchenRemodeling />} />
             <Route path="/services/bathroom-remodeling" element={<BathroomRemodeling />} />
             <Route path="/services/basement-remodeling" element={<BasementRemodeling />} />

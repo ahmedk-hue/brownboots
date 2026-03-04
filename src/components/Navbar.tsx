@@ -63,6 +63,21 @@ export function Navbar() {
             </div>
           </div>
 
+          <Link to="/process" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Process</Link>
+          <Link to="/about" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>About</Link>
+
+          <div className="relative group">
+            <div className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>
+              Partnerships <ChevronDown className="w-4 h-4" />
+            </div>
+            <div className="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[180px]">
+                <Link to="/partnerships" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Realtors & Trades</Link>
+                <Link to="/referrals" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Referral Program</Link>
+              </div>
+            </div>
+          </div>
+
           <Link to="/contact" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Contact</Link>
           <a
             href="tel:724-995-3320"
@@ -72,6 +87,17 @@ export function Navbar() {
               }`}
           >
             <Phone className="w-4 h-4" /> (724) 995-3320
+          </a>
+          <a
+            href="https://clienthub.getjobber.com/client_hubs/brownboot-repairs-remodeling/login/new"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`hidden lg:flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all border ${shouldShowSolid
+              ? "border-slate-200 text-slate-600 hover:bg-slate-50"
+              : "border-white/20 text-white hover:bg-white/10"
+              }`}
+          >
+            Client Login
           </a>
         </div>
 
@@ -110,7 +136,20 @@ export function Navbar() {
                 </div>
               </div>
 
+              <Link to="/process" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Process</Link>
+              <Link to="/about" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
+              <Link to="/partnerships" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Partnerships</Link>
+              <Link to="/referrals" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Referral Program</Link>
               <Link to="/contact" className="text-lg font-medium text-slate-900 pt-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+              <a
+                href="https://clienthub.getjobber.com/client_hubs/brownboot-repairs-remodeling/login/new"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg font-medium text-primary pt-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Client Login (Jobber)
+              </a>
               <a href="tel:724-995-3320" className="text-lg font-bold text-primary flex items-center gap-2">
                 <Phone className="w-5 h-5" /> (724) 995-3320
               </a>
