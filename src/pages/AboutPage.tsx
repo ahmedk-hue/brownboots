@@ -120,17 +120,17 @@ const AboutPage = () => {
                             {
                                 title: "Reliability",
                                 desc: "We show up on time, stay on schedule, and do what we say we're going to do. No exceptions.",
-                                icon: <Clock className="w-6 h-6 text-primary" />
+                                icon: <Clock className="w-6 h-6" />
                             },
                             {
                                 title: "Transparency",
                                 desc: "Honest pricing and clear communication from the first site visit to the final walkthrough.",
-                                icon: <Shield className="w-6 h-6 text-primary" />
+                                icon: <Shield className="w-6 h-6" />
                             },
                             {
                                 title: "Longevity",
                                 desc: "Our tagline isn't just for show. We build things to last using premium materials and techniques.",
-                                icon: <CheckCircle2 className="w-6 h-6 text-primary" />
+                                icon: <CheckCircle2 className="w-6 h-6" />
                             }
                         ].map((value, idx) => (
                             <motion.div
@@ -142,7 +142,7 @@ const AboutPage = () => {
                                 className="bg-white p-10 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all group"
                             >
                                 <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                                    <div className="group-hover:text-white transition-colors">{value.icon}</div>
+                                    <div className="text-primary group-hover:text-white transition-colors">{value.icon}</div>
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-4">{value.title}</h3>
                                 <p className="text-slate-600 leading-relaxed">{value.desc}</p>
