@@ -26,9 +26,12 @@ export function Navbar() {
         }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link to="/" className="font-display font-bold text-2xl tracking-tighter">
-          <span className={shouldShowSolid ? "text-slate-900" : "text-white"}>Brown</span>
-          <span className="text-primary">Boot</span>
+        <Link to="/" className="flex items-center">
+          <img
+            src="/logo-navbar.png"
+            alt="BrownBoot Repairs & Remodeling"
+            className="h-10 md:h-12 w-auto object-contain transition-transform hover:scale-105"
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
