@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChefHat, Bath, Construction, Layout, DoorOpen, ArrowRight } from 'lucide-react';
+import { ChefHat, Bath, Construction, Layout, DoorOpen, ArrowRight, Box, Scaling, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
