@@ -11,7 +11,7 @@ interface LocationHeroProps {
 
 const LocationHero = ({ city, subtitle }: LocationHeroProps) => {
     return (
-        <section className="relative min-h-[40vh] flex items-center overflow-hidden bg-slate-950 pt-32 pb-16 md:pt-48 md:pb-24">
+        <section className="relative min-h-[30vh] flex items-center overflow-hidden bg-slate-950 pt-28 pb-10 md:pt-36 md:pb-14">
             {/* Background with Decorative Elements */}
             <div className="absolute inset-0 z-0 text-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950"></div>
