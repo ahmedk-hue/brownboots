@@ -314,7 +314,7 @@ const InvestmentGuidePage = () => {
                                     Want to Remodel but Don’t Know <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary italic underline decoration-primary/30 underline-offset-8">Where to Start with the Budget?</span>
                                 </h1>
                                 <p className="text-2xl text-slate-300 mb-12 leading-relaxed">
-                                    Download our free **2026 Westmoreland County Home Investment Guide**. Get realistic pricing for kitchens, baths, and more—built specifically for local homeowners who value quality that lasts.
+                                    Download our free <strong>2026 Westmoreland County Home Investment Guide</strong>. Get realistic pricing for kitchens, baths, and more—built specifically for local homeowners who value quality that lasts.
                                 </p>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
