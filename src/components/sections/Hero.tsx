@@ -9,7 +9,13 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-slate-950 text-white pt-20">
       {/* Background with Decorative Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950" />
+        <div className="absolute inset-0 bg-slate-950/60 z-10" />
+        <img
+          src="/hero-home.jpg"
+          alt="Luxury Remodeling"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 to-slate-950/80 z-10" />
       </div>
 
       {/* Subtle Effects Layer */}

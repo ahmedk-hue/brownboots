@@ -17,9 +17,14 @@ const TrimCarpentry = () => {
 
             {/* Hero Section */}
             <section className="bg-slate-950 text-white pt-32 pb-24 relative overflow-hidden text-center">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-slate-950" />
-                    <div className="absolute inset-0 opacity-30 pointer-events-none">
+                <div className="absolute inset-0 z-0 text-center">
+                    <div className="absolute inset-0 bg-slate-950/70 z-10" />
+                    <img
+                        src="/service-trim.jpg"
+                        alt="Trim Carpentry"
+                        className="absolute inset-0 w-full h-full object-cover opacity-50"
+                    />
+                    <div className="absolute inset-0 opacity-30 pointer-events-none z-10">
                         <AnimatedGradient />
                         <Particles />
                         <LightBeams />
