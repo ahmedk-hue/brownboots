@@ -5,34 +5,34 @@ import SEO from '../components/SEO';
 
 const projects = [
     {
-        image: "/gallery-kitchen.png",
+        image: "/project-kitchen-after-1.jpg",
         title: "Modern Kitchen Transformation",
-        category: "Kitchen Remodeling",
-        description: "Complete gourmet kitchen overhaul with custom cabinetry and premium appliances."
+        category: "Full Remodel",
+        description: "A complete kitchen overhaul featuring custom cabinetry, premium finishes, and a modern open-concept layout."
     },
     {
-        image: "/gallery-bathroom.png",
-        title: "Luxury Master Suite Bath",
-        category: "Bathroom Remodeling",
-        description: "Spa-like bathroom renovation featuring high-end tiling and modern fixtures."
+        image: "/project-kitchen-during-1.jpg",
+        title: "Kitchen Remodel in Progress",
+        category: "Full Remodel",
+        description: "A look at the structural changes and utility updates during the peak of this major kitchen transformation."
     },
     {
-        image: "/gallery-trim.png",
-        title: "Custom Trim & Millwork",
-        category: "Trim Carpentry",
-        description: "Elegant crown molding and custom millwork for a sophisticated interior finish."
+        image: "/project-kitchen-before-1.jpg",
+        title: "Kitchen - Before",
+        category: "Full Remodel",
+        description: "The original state of the kitchen before we stepped in to modernize and elevate the space."
     },
     {
-        image: "/gallery-basement.png",
-        title: "Finished Entertainment Basement",
-        category: "Basement Remodeling",
-        description: "Transformed an unfinished space into a stunning family entertainment hub."
+        image: "/project-kitchen-after-2.jpg",
+        title: "Kitchen - Detail & Finish",
+        category: "Full Remodel",
+        description: "Highlighting the high-end hardware, countertops, and meticulous attention to detail."
     },
     {
-        image: "/gallery-windows.png",
-        title: "Premium Window Installation",
-        category: "Windows & Doors",
-        description: "Energy-efficient window replacement enhancing both aesthetics and comfort."
+        image: "/project-bedroom-before-1.jpg",
+        title: "Bedroom - Before",
+        category: "Home Remodeling",
+        description: "Initial assessment of a bedroom space prior to its upcoming renovation."
     }
 ];
 

@@ -4,29 +4,29 @@ import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    image: "/gallery-kitchen.png",
-    title: "Gourmet Kitchen Transformation",
-    category: "Kitchen Remodeling"
+    image: "/project-kitchen-after-1.jpg",
+    title: "Modern Kitchen Transformation",
+    category: "Full Remodel"
   },
   {
-    image: "/gallery-bathroom.png",
-    title: "Luxury Master Suite Bath",
-    category: "Bathroom Remodeling"
+    image: "/project-kitchen-during-1.jpg",
+    title: "Kitchen Remodel in Progress",
+    category: "Full Remodel"
   },
   {
-    image: "/gallery-basement.png",
-    title: "Finished Basement Lounge",
-    category: "Basement Remodeling"
+    image: "/project-kitchen-before-1.jpg",
+    title: "Kitchen - Before",
+    category: "Full Remodel"
   },
   {
-    image: "/gallery-trim.png",
-    title: "Custom Crown & Baseboard",
-    category: "Trim Carpentry"
+    image: "/project-kitchen-after-2.jpg",
+    title: "Kitchen - Detail & Finish",
+    category: "Full Remodel"
   },
   {
-    image: "/gallery-windows.png",
-    title: "Premium Window & Door Install",
-    category: "Windows & Door Installation"
+    image: "/project-bedroom-before-1.jpg",
+    title: "Bedroom - Before",
+    category: "Home Remodeling"
   }
 ];
 
