@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, CheckCircle, Download, Facebook, Instagram } from 'lucide-react';
 import { useState, type FormEvent, type ChangeEvent } from 'react';
 import SEO from '../components/SEO';

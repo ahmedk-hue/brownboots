@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { PenTool, CheckCircle2, ArrowRight, Calendar, ClipboardCheck, PencilRuler, HardHat, CheckCircle } from 'lucide-react';
 import SEO from '../../components/SEO';
 import { AnimatedGradient } from '../../components/effects/AnimatedGradient';

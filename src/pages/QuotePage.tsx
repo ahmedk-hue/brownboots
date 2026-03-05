@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import { QuoteFunnel } from '../components/sections/QuoteFunnel';
 import { AnimatedGradient } from '../components/effects/AnimatedGradient';
