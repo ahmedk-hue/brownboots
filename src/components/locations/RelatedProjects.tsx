@@ -5,28 +5,28 @@ import { Link } from 'react-router-dom';
 
 const projects = [
     {
-        image: "/gallery-kitchen.png",
+        image: "/kitchen-after-1.jpg",
         title: "Modern Kitchen Transformation",
         category: "Kitchen Remodeling",
         location: "Irwin, PA"
     },
     {
-        image: "/gallery-bathroom.png",
+        image: "/bathroom-after-1.jpg",
         title: "Luxury Master Suite Bath",
         category: "Bathroom Remodeling",
         location: "Greensburg, PA"
     },
     {
-        image: "/gallery-trim.png",
-        title: "Custom Trim & Millwork",
-        category: "Trim Carpentry",
+        image: "/bedroom-after-1.jpg",
+        title: "Custom Bedroom Renovation",
+        category: "Home Remodeling",
         location: "Murrysville, PA"
     },
     {
-        image: "/gallery-basement.png",
-        title: "Finished Entertainment Basement",
-        category: "Basement Remodeling",
-        location: "Irwin, PA"
+        image: "/kitchen-after-2.jpg",
+        title: "Premium Kitchen Detail",
+        category: "Kitchen Remodeling",
+        location: "North Huntingdon, PA"
     }
 ];
 
