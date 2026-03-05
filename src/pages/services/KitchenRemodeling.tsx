@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChefHat, CheckCircle2, ArrowRight, Calendar, ClipboardCheck, PencilRuler, HardHat, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import { AnimatedGradient } from '../../components/effects/AnimatedGradient';
 import { Particles } from '../../components/effects/Particles';
@@ -45,12 +46,12 @@ const KitchenRemodeling = () => {
                             Trusted by Westmoreland County homeowners to turn dated kitchens into the heart of the home. Built to last, designed for convenience, and handled by local pros.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                            <a
-                                href="tel:724-995-3320"
+                            <Link
+                                to="/quote"
                                 className="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20"
                             >
                                 Get My Free Estimate
-                            </a>
+                            </Link>
                             <a
                                 href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
                                 target="_blank"

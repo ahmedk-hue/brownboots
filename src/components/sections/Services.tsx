@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChefHat, Bath, Box, Scaling, DoorOpen, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ChefHat, Bath, Construction, Layout, DoorOpen, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const services = [
@@ -97,10 +97,10 @@ export function Services() {
         <div className="mt-20 text-center">
           <p className="text-slate-500 font-medium mb-6 italic">Looking for something specific?</p>
           <Link
-            to="/services"
-            className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-black transition-all shadow-lg"
+            to="/quote"
+            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all shadow-lg shadow-primary/20"
           >
-            View All Services <ArrowRight className="w-4 h-4" />
+            Get Your Free Quote <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </div>

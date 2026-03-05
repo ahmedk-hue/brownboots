@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import { ArrowRight, Phone, Star, ShieldCheck, Clock } from "lucide-react";
+import { ArrowRight, Star, Clock, ShieldCheck, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import { AnimatedGradient } from "../effects/AnimatedGradient";
 import { Particles } from "../effects/Particles";
 import { LightBeams } from "../effects/LightBeams";
@@ -66,12 +67,12 @@ export function Hero() {
                 Request A Quote <ArrowRight className="w-5 h-5" />
               </a>
 
-              <a
-                href="tel:724-995-3320"
-                className="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-bold rounded-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+              <Link
+                to="/quote"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20"
               >
-                <Phone className="w-5 h-5" /> (724) 995-3320
-              </a>
+                Get My Free Estimate
+              </Link>
             </div>
 
             {/* Trust Indicators */}

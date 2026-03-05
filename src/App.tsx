@@ -31,6 +31,7 @@ import Export from "./pages/locations/Export";
 import Jeannette from "./pages/locations/Jeannette";
 import NorthHuntingdon from "./pages/locations/NorthHuntingdon";
 import GalleryPage from "./pages/GalleryPage";
+import QuotePage from "./pages/QuotePage";
 
 const MainLayout = () => (
   <>
@@ -65,6 +66,7 @@ export default function App() {
             <Route path="/partnerships" element={<PartnershipsPage />} />
             <Route path="/referrals" element={<ReferralsPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/quote" element={<QuotePage />} />
             <Route path="/services/kitchen-remodeling" element={<KitchenRemodeling />} />
             <Route path="/services/bathroom-remodeling" element={<BathroomRemodeling />} />
             <Route path="/services/basement-remodeling" element={<BasementRemodeling />} />
