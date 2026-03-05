@@ -43,7 +43,7 @@ const Greensburg = () => {
             <LocationSchema
                 name={`BrownBoot Repairs & Remodeling - ${city}`}
                 description={`Greensburg's local remodeling experts. Specializing in high-end kitchen and bath transformations for homeowners in the County Seat.`}
-                image="https://images.unsplash.com/photo-1576013551627-0cfde31682a1?q=80&w=2070&auto=format&fit=crop"
+                image="/logo-primary.png"
                 url={`https://brownbootrr.com/locations/greensburg`}
                 telephone="724-995-3320"
                 address={{ streetAddress: "115 McMahon Dr.", addressLocality: "Manor", addressRegion: "PA", postalCode: "15665", addressCountry: "US" }}

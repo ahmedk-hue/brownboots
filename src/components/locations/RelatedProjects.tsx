@@ -5,27 +5,27 @@ import { Link } from 'react-router-dom';
 
 const projects = [
     {
-        image: "https://images.unsplash.com/photo-1484154218962-a1c002085aac?auto=format&fit=crop&q=80",
-        title: "Modern Kitchen Overhaul",
+        image: "/gallery-kitchen.png",
+        title: "Modern Kitchen Transformation",
         category: "Kitchen Remodeling",
         location: "Irwin, PA"
     },
     {
-        image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80",
-        title: "Luxury Master Bath",
+        image: "/gallery-bathroom.png",
+        title: "Luxury Master Suite Bath",
         category: "Bathroom Remodeling",
         location: "Greensburg, PA"
     },
     {
-        image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80",
-        title: "Open Concept Living",
-        category: "Interior Renovation",
+        image: "/gallery-trim.png",
+        title: "Custom Trim & Millwork",
+        category: "Trim Carpentry",
         location: "Murrysville, PA"
     },
     {
-        image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?auto=format&fit=crop&q=80",
-        title: "Basement Home Theater",
-        category: "Basement Finishing",
+        image: "/gallery-basement.png",
+        title: "Finished Entertainment Basement",
+        category: "Basement Remodeling",
         location: "Irwin, PA"
     }
 ];

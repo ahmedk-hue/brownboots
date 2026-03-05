@@ -43,7 +43,7 @@ const Irwin = () => {
             <LocationSchema
                 name={`BrownBoot Repairs & Remodeling - ${city}`}
                 description={`Irwin's local remodeling experts. Specializing in custom kitchens, baths, and structural repairs across the Norwin area and historic Irwin.`}
-                image="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=2070&auto=format&fit=crop"
+                image="/logo-primary.png"
                 url={`https://brownbootrr.com/locations/irwin`}
                 telephone="724-995-3320"
                 address={{ streetAddress: "115 McMahon Dr.", addressLocality: "Manor", addressRegion: "PA", postalCode: "15665", addressCountry: "US" }}

@@ -43,7 +43,7 @@ const NorthHuntingdon = () => {
             <LocationSchema
                 name={`BrownBoot Repairs & Remodeling - ${city}`}
                 description={`Premier home remodeler serving ${fullCity}. Specialized in high-end renovations and custom additions across the Norwin area.`}
-                image="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop"
+                image="/logo-primary.png"
                 url={`https://brownbootrr.com/locations/north-huntingdon`}
                 telephone="724-995-3320"
                 address={{ streetAddress: "115 McMahon Dr.", addressLocality: "Manor", addressRegion: "PA", postalCode: "15665", addressCountry: "US" }}

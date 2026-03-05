@@ -43,7 +43,7 @@ const Export = () => {
             <LocationSchema
                 name={`BrownBoot Repairs & Remodeling - ${city}`}
                 description={`Premier home remodeler serving ${fullCity}. Specialist in custom carpentry and historic home updates near the Westmoreland Heritage Trail.`}
-                image="https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=2070&auto=format&fit=crop"
+                image="/logo-primary.png"
                 url={`https://brownbootrr.com/locations/export`}
                 telephone="724-995-3320"
                 address={{ streetAddress: "115 McMahon Dr.", addressLocality: "Manor", addressRegion: "PA", postalCode: "15665", addressCountry: "US" }}
