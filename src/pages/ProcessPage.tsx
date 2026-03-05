@@ -31,7 +31,7 @@ const steps = [
         name: "Precision Construction",
         description: "Our team brings your vision to life with precision and respect for your home. We maintain a clean, safe job site throughout the build.",
         icon: <HardHat className="w-8 h-8" />,
-        image: "/process-4-v2.jpg",
+        image: "/process-4-v3.jpg",
         details: ["Skilled craftsmanship", "Daily clean-up", "Progress updates", "Structural integrity focus"]
     },
     {
