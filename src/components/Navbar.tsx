@@ -89,7 +89,7 @@ export function Navbar() {
             <Phone className="w-4 h-4" /> (724) 995-3320
           </a>
           <a
-            href="https://clienthub.getjobber.com/client_hubs/brownboot-repairs-remodeling/login/new"
+            href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
             target="_blank"
             rel="noopener noreferrer"
             className={`hidden lg:flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all border ${shouldShowSolid
@@ -142,7 +142,7 @@ export function Navbar() {
               <Link to="/referrals" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Referral Program</Link>
               <Link to="/contact" className="text-lg font-medium text-slate-900 pt-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
               <a
-                href="https://clienthub.getjobber.com/client_hubs/brownboot-repairs-remodeling/login/new"
+                href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg font-medium text-primary pt-2"

@@ -47,7 +47,7 @@ const KitchenRemodeling = () => {
                                 Get My Free Estimate
                             </a>
                             <a
-                                href="https://clienthub.getjobber.com/client_hubs/2957b483-4a1e-4503-ac8b-40b49ac21e5b/login/new?source=share_link"
+                                href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all"
