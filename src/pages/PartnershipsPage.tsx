@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Handshake, UserPlus, FileText, CheckCircle2, ArrowRight, Building2, Briefcase } from 'lucide-react';
 import SEO from '../components/SEO';
 import { AnimatedGradient } from '../components/effects/AnimatedGradient';

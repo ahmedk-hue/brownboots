@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Gift, Heart, UserCheck, DollarSign, CheckCircle2, ArrowRight, Share2, MessageCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 import { AnimatedGradient } from '../components/effects/AnimatedGradient';

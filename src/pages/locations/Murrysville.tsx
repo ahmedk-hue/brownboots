@@ -1,5 +1,5 @@
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { CheckCircle2, FileText, Landmark, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import LocationSchema from '../../components/seo/LocationSchema';

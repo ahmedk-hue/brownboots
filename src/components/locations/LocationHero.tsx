@@ -1,5 +1,5 @@
 
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { AnimatedGradient } from '../effects/AnimatedGradient';
 import { Particles } from '../effects/Particles';
 import { LightBeams } from '../effects/LightBeams';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import {
     ChevronRight,
     ChevronLeft,
@@ -219,13 +219,13 @@ export const QuoteFunnel = () => {
                                     key={field.value}
                                     onClick={() => handleSelect(step.id, field.value)}
                                     className={`group p-6 rounded-[2rem] border-2 transition-all text-left flex items-center gap-4 ${formData[step.id] === field.value
-                                            ? 'border-primary bg-red-50 text-slate-900'
-                                            : 'border-slate-100 bg-white hover:border-slate-300 text-slate-600'
+                                        ? 'border-primary bg-red-50 text-slate-900'
+                                        : 'border-slate-100 bg-white hover:border-slate-300 text-slate-600'
                                         }`}
                                 >
                                     <div className={`p-3 rounded-2xl transition-all ${formData[step.id] === field.value
-                                            ? 'bg-primary text-white'
-                                            : 'bg-slate-50 text-slate-400 group-hover:bg-slate-100 group-hover:text-primary'
+                                        ? 'bg-primary text-white'
+                                        : 'bg-slate-50 text-slate-400 group-hover:bg-slate-100 group-hover:text-primary'
                                         }`}>
                                         {field.icon}
                                     </div>

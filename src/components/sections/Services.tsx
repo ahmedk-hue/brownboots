@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { ChefHat, Bath, Construction, Layout, DoorOpen, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
