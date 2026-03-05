@@ -5,34 +5,58 @@ import SEO from '../components/SEO';
 
 const projects = [
     {
-        image: "/project-kitchen-after-1.jpg",
+        image: "/kitchen-after-1.jpg",
         title: "Modern Kitchen Transformation",
         category: "Full Remodel",
-        description: "A complete kitchen overhaul featuring custom cabinetry, premium finishes, and a modern open-concept layout."
+        description: "A complete kitchen overhaul featuring custom white cabinetry, premium granite finishes, and a modern open-concept layout."
     },
     {
-        image: "/project-kitchen-during-1.jpg",
-        title: "Kitchen Remodel in Progress",
-        category: "Full Remodel",
-        description: "A look at the structural changes and utility updates during the peak of this major kitchen transformation."
-    },
-    {
-        image: "/project-kitchen-before-1.jpg",
-        title: "Kitchen - Before",
-        category: "Full Remodel",
-        description: "The original state of the kitchen before we stepped in to modernize and elevate the space."
-    },
-    {
-        image: "/project-kitchen-after-2.jpg",
+        image: "/kitchen-after-2.jpg",
         title: "Kitchen - Detail & Finish",
         category: "Full Remodel",
-        description: "Highlighting the high-end hardware, countertops, and meticulous attention to detail."
+        description: "Highlighting the high-end hardware, custom shelving, and meticulous attention to detail in the finished space."
     },
     {
-        image: "/project-bedroom-before-1.jpg",
+        image: "/kitchen-during-1.jpg",
+        title: "Kitchen Remodel in Progress",
+        category: "Full Remodel",
+        description: "A look at the professional installation process and utility updates during the peak of this major transformation."
+    },
+    {
+        image: "/kitchen-before-1.jpg",
+        title: "Kitchen - Before",
+        category: "Full Remodel",
+        description: "The original state of the kitchen, showcasing the dramatic improvement in functionality and style."
+    },
+    {
+        image: "/bedroom-after-1.jpg",
+        title: "Bedroom Refresh",
+        category: "Remodeling",
+        description: "From dated carpet to modern flooring and fresh paint, this bedroom was completely revitalized for a cozy, premium feel."
+    },
+    {
+        image: "/bedroom-before-1.jpg",
         title: "Bedroom - Before",
-        category: "Home Remodeling",
-        description: "Initial assessment of a bedroom space prior to its upcoming renovation."
+        category: "Remodeling",
+        description: "Initial state of the bedroom prior to our team stepping in to modernize the space."
+    },
+    {
+        image: "/living-after-1.jpg",
+        title: "Living Room Floor Update",
+        category: "Flooring",
+        description: "Installation of high-durability modern flooring that completely changes the aesthetic and feel of the main living area."
+    },
+    {
+        image: "/bathroom-after-1.jpg",
+        title: "Bathroom Modernization",
+        category: "Bathroom",
+        description: "A sleek, clean bathroom update featuring new tiling and fixtures for a professional finish."
+    },
+    {
+        image: "/framing-1.jpg",
+        title: "Structural Framing",
+        category: "Additions",
+        description: "Professional structural framing for a new home addition, highlighting our expert carpentry work."
     }
 ];
 
