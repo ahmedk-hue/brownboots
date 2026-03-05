@@ -58,6 +58,7 @@ export function Footer() {
               <li><Link to="/services/basement-remodeling" className="hover:text-white transition-colors">Basement Remodeling</Link></li>
               <li><Link to="/services/trim-carpentry" className="hover:text-white transition-colors">Trim Carpentry</Link></li>
               <li><Link to="/services/windows-doors" className="hover:text-white transition-colors">Windows & Doors</Link></li>
+              <li><Link to="/investment-guide" className="text-primary font-bold hover:text-red-700 transition-colors">Home Investment Guide</Link></li>
             </ul>
           </div>
 

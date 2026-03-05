@@ -77,6 +77,7 @@ export function Navbar() {
               <div className="bg-white rounded-xl shadow-xl border border-slate-100 p-2 min-w-[180px]">
                 <Link to="/partnerships" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Realtors & Trades</Link>
                 <Link to="/referrals" className="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors font-medium text-sm">Referral Program</Link>
+                <Link to="/investment-guide" className="block px-4 py-2 text-primary hover:bg-red-50 rounded-lg transition-colors font-bold text-sm">Home Investment Guide</Link>
               </div>
             </div>
           </div>
@@ -143,6 +144,7 @@ export function Navbar() {
               <Link to="/about" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
               <Link to="/partnerships" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Partnerships</Link>
               <Link to="/referrals" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Referral Program</Link>
+              <Link to="/investment-guide" className="text-lg font-bold text-primary pt-2 underline decoration-primary/30" onClick={() => setIsMobileMenuOpen(false)}>Home Investment Guide</Link>
               <Link to="/contact" className="text-lg font-medium text-slate-900 pt-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
               <a
                 href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
