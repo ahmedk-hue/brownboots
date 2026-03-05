@@ -54,7 +54,7 @@ const AboutPage = () => {
                         >
                             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border-8 border-white group">
                                 <img
-                                    src="/about-kyle.png"
+                                    src="/about-kyle.jpg"
                                     alt="Kyle Stack - Founder of BrownBoot"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
