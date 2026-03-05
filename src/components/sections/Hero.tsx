@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-slate-950/60 z-10" />
         <img
-          src="/hero-home.jpg"
+          src="/hero-home-v2.jpg"
           alt="Luxury Remodeling"
           className="absolute inset-0 w-full h-full object-cover"
         />

@@ -10,35 +10,35 @@ const steps = [
         name: "Free Home Visit",
         description: "Our process begins with a personal assessment of your project. We offer a 24-48 hour response time to schedule your initial consultation.",
         icon: <Calendar className="w-8 h-8" />,
-        image: "/process-1.jpg",
+        image: "/process-1-v2.jpg",
         details: ["Project scope discussion", "Initial measurements", "Budget alignment", "Owner-led consultation"]
     },
     {
         name: "Detailed Estimate",
         description: "Transparency is key. We'll provide a comprehensive quote back to you within 2-3 days of our visit, ensuring no surprises down the line.",
         icon: <ClipboardCheck className="w-8 h-8" />,
-        image: "/process-2.jpg",
+        image: "/process-2-v2.jpg",
         details: ["Itemized pricing", "Material options", "Project timeline", "Clear contract terms"]
     },
     {
         name: "Selection & Planning",
         description: "We help you pick finishes and handle the logistics. From material samples to local permits, we set the stage for a perfect build.",
         icon: <PencilRuler className="w-8 h-8" />,
-        image: "/process-3.jpg",
+        image: "/process-3-v2.jpg",
         details: ["Material source assistance", "Structural reviews", "Local permit filing", "Project schedule finalization"]
     },
     {
         name: "Precision Construction",
         description: "Our team brings your vision to life with precision and respect for your home. We maintain a clean, safe job site throughout the build.",
         icon: <HardHat className="w-8 h-8" />,
-        image: "/process-4.jpg",
+        image: "/process-4-v2.jpg",
         details: ["Skilled craftsmanship", "Daily clean-up", "Progress updates", "Structural integrity focus"]
     },
     {
         name: "Final Walkthrough",
         description: "We don't consider the job done until you're completely satisfied. We'll walk through every detail together to ensure perfection.",
         icon: <CheckCircle className="w-8 h-8" />,
-        image: "/process-5.jpg",
+        image: "/process-5-v2.jpg",
         details: ["Final inspection", "Detail touch-ups", "Maintenance guidance", "Project sign-off"]
     }
 ];
