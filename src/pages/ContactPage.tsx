@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, CheckCircle, Download, Facebook, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useState, type FormEvent, type ChangeEvent } from 'react';
 import SEO from '../components/SEO';
 import { AnimatedGradient } from '../components/effects/AnimatedGradient';
@@ -145,9 +146,9 @@ const ContactPage = () => {
                                             Choosing the right materials
                                         </li>
                                     </ul>
-                                    <button className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all shadow-xl shadow-primary/20">
+                                    <Link to="/investment-guide" className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-bold hover:bg-red-700 transition-all shadow-xl shadow-primary/20">
                                         <Download className="w-5 h-5" /> Download Guide
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
 
