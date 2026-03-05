@@ -30,6 +30,7 @@ import Murrysville from "./pages/locations/Murrysville";
 import Export from "./pages/locations/Export";
 import Jeannette from "./pages/locations/Jeannette";
 import NorthHuntingdon from "./pages/locations/NorthHuntingdon";
+import GalleryPage from "./pages/GalleryPage";
 
 const MainLayout = () => (
   <>
@@ -63,6 +64,7 @@ export default function App() {
             <Route path="/process" element={<ProcessPage />} />
             <Route path="/partnerships" element={<PartnershipsPage />} />
             <Route path="/referrals" element={<ReferralsPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/services/kitchen-remodeling" element={<KitchenRemodeling />} />
             <Route path="/services/bathroom-remodeling" element={<BathroomRemodeling />} />
             <Route path="/services/basement-remodeling" element={<BasementRemodeling />} />

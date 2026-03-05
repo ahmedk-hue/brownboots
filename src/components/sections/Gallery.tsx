@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
@@ -38,6 +40,11 @@ export function Gallery() {
           <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
             See the transformation we bring to homes across Westmoreland County.
           </p>
+          <div className="mt-8">
+            <Link to="/gallery" className="text-primary font-bold inline-flex items-center gap-2 hover:gap-3 transition-all">
+              View Full Gallery <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
