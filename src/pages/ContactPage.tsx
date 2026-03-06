@@ -1,36 +1,13 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, CheckCircle, Download, Facebook, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState, type FormEvent, type ChangeEvent } from 'react';
+import { QuoteFunnel } from '../components/sections/QuoteFunnel';
 import SEO from '../components/SEO';
 import { AnimatedGradient } from '../components/effects/AnimatedGradient';
 import { Particles } from '../components/effects/Particles';
 import { LightBeams } from '../components/effects/LightBeams';
 
 const ContactPage = () => {
-    const [formState, setFormState] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        projectType: "",
-        budget: "",
-        timeline: "",
-        location: "",
-        message: ""
-    });
-
-    const handleSubmit = (e: FormEvent) => {
-        e.preventDefault();
-        console.log("Form submitted:", formState);
-        alert("Thank you! We will be in touch shortly.");
-    };
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-        setFormState({
-            ...formState,
-            [e.target.name]: e.target.value
-        });
-    };
 
     return (
         <div className="pb-16">
@@ -168,107 +145,8 @@ const ContactPage = () => {
                         {/* Form Side */}
                         <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border border-slate-100 relative">
                             <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/5 rounded-full blur-2xl"></div>
-                            <div className="relative z-10">
-                                <h3 className="text-3xl font-display font-bold text-slate-900 mb-2">Request an Estimate</h3>
-                                <p className="text-slate-500 mb-10 text-lg">Tell us about your project goals and we'll get back to you within 24 hours.</p>
-
-                                <form onSubmit={handleSubmit} className="space-y-6">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-bold text-slate-900 uppercase tracking-wider">Full Name</label>
-                                            <input
-                                                type="text"
-                                                name="name"
-                                                required
-                                                className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-slate-400"
-                                                placeholder="Your Name"
-                                                onChange={handleChange}
-                                            />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-bold text-slate-900 uppercase tracking-wider">Phone Number</label>
-                                            <input
-                                                type="tel"
-                                                name="phone"
-                                                required
-                                                className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-slate-400"
-                                                placeholder="(724) 000-0000"
-                                                onChange={handleChange}
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-bold text-slate-900 uppercase tracking-wider">Email Address</label>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            required
-                                            className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-slate-400"
-                                            placeholder="you@email.com"
-                                            onChange={handleChange}
-                                        />
-                                    </div>
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-bold text-slate-900 uppercase tracking-wider">Project Type</label>
-                                            <select
-                                                name="projectType"
-                                                className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all bg-white appearance-none"
-                                                onChange={handleChange}
-                                            >
-                                                <option value="">Select Category</option>
-                                                <option value="kitchen">Kitchen Remodel</option>
-                                                <option value="bathroom">Bathroom Remodel</option>
-                                                <option value="basement">Basement Remodel</option>
-                                                <option value="trim">Trim Carpentry</option>
-                                                <option value="windows-doors">Windows & Doors</option>
-                                                <option value="other">General Inquiry</option>
-                                            </select>
-                                        </div>
-                                        <div className="space-y-2">
-                                            <label className="text-sm font-bold text-slate-900 uppercase tracking-wider">Preferred Timeline</label>
-                                            <input
-                                                type="text"
-                                                name="timeline"
-                                                className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-slate-400"
-                                                placeholder="e.g. 1-3 Months"
-                                                onChange={handleChange}
-                                            />
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-bold text-slate-900 uppercase tracking-wider">Location (PA City/Zip)</label>
-                                        <input
-                                            type="text"
-                                            name="location"
-                                            required
-                                            className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-slate-400"
-                                            placeholder="e.g. Irwin, PA"
-                                            onChange={handleChange}
-                                        />
-                                    </div>
-
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-bold text-slate-900 uppercase tracking-wider">Project Details</label>
-                                        <textarea
-                                            name="message"
-                                            rows={4}
-                                            className="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all placeholder:text-slate-400 resize-none"
-                                            placeholder="Tell us about your home transformation goals..."
-                                            onChange={handleChange}
-                                        />
-                                    </div>
-
-                                    <button
-                                        type="submit"
-                                        className="w-full py-5 bg-primary hover:bg-red-700 text-white font-bold rounded-2xl transition-all shadow-xl shadow-primary/20 text-lg flex items-center justify-center gap-3 group"
-                                    >
-                                        Send Request <Mail className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </button>
-                                </form>
+                            <div className="relative z-10 flex items-center justify-center">
+                                <QuoteFunnel />
                             </div>
                         </div>
                     </div>
