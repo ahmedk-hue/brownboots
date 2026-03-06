@@ -50,16 +50,14 @@ const KitchenRemodeling = () => {
                                 to="/quote"
                                 className="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20"
                             >
-                                Get My Free Estimate
+                                Get Free Quote
                             </Link>
-                            <a
-                                href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <Link
+                                to="/investment-guide"
                                 className="w-full sm:w-auto inline-flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all"
                             >
-                                Client Login
-                            </a>
+                                See Price Guide
+                            </Link>
                         </div>
                     </motion.div>
                 </div>
@@ -196,12 +194,20 @@ const KitchenRemodeling = () => {
                             <p className="text-xl text-slate-400 mb-12 leading-relaxed">
                                 Join the Westmoreland County homeowners who trust BrownBoot for craftsmanship that's built for real life.
                             </p>
-                            <a
-                                href="tel:724-995-3320"
-                                className="inline-flex items-center justify-center bg-primary text-white px-12 py-6 rounded-full font-bold text-xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/40"
-                            >
-                                Schedule Your Home Visit
-                            </a>
+                            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full mt-8">
+                                <Link
+                                    to="/quote"
+                                    className="inline-flex items-center justify-center bg-primary text-white px-12 py-6 rounded-full font-bold text-xl hover:bg-red-700 transition-all shadow-2xl shadow-primary/40"
+                                >
+                                    Get Free Quote
+                                </Link>
+                                <Link
+                                    to="/investment-guide"
+                                    className="inline-flex items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 text-white px-12 py-6 rounded-full font-bold text-xl hover:bg-white/20 transition-all shadow-2xl"
+                                >
+                                    See Price Guide
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

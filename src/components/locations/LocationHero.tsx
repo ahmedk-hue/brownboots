@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
 import { AnimatedGradient } from '../effects/AnimatedGradient';
@@ -51,18 +52,18 @@ const LocationHero = ({ city, subtitle }: LocationHeroProps) => {
                         {subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                        <a
-                            href="tel:724-995-3320"
+                        <Link
+                            to="/quote"
                             className="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20 text-center"
                         >
-                            Call (724) 995-3320
-                        </a>
-                        <a
-                            href="#contact"
+                            Get Free Quote
+                        </Link>
+                        <Link
+                            to="/investment-guide"
                             className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white/20 transition-all font-display text-center"
                         >
-                            Get Local Estimate
-                        </a>
+                            See Price Guide
+                        </Link>
                     </div>
                 </motion.div>
             </div>

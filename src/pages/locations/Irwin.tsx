@@ -123,12 +123,20 @@ const Irwin = () => {
                                         </div>
                                     </li>
                                 </ul>
-                                <Link
-                                    to="/contact"
-                                    className="inline-flex items-center gap-2 bg-primary text-white w-full justify-center py-4 rounded-xl font-bold hover:bg-red-700 transition-all font-display"
-                                >
-                                    Start Your Irwin Project
-                                </Link>
+                                <div className="flex flex-col gap-4">
+                                    <Link
+                                        to="/quote"
+                                        className="inline-flex items-center gap-2 bg-primary text-white w-full justify-center py-4 rounded-xl font-bold hover:bg-red-700 transition-all font-display text-center"
+                                    >
+                                        Get Free Quote
+                                    </Link>
+                                    <Link
+                                        to="/investment-guide"
+                                        className="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-white w-full justify-center py-4 rounded-xl font-bold hover:bg-white/20 transition-all font-display text-center"
+                                    >
+                                        See Price Guide
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -161,12 +169,20 @@ const Irwin = () => {
                         <p className="text-lg text-slate-600 mb-10">
                             Don't start without the local data. Our <strong>Irwin Homeowner's Guide</strong> includes current permit fee estimates and Norwin-area material delivery costs for 2025.
                         </p>
-                        <Link
-                            to="/contact"
-                            className="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20 font-display"
-                        >
-                            Get the {city} Guide
-                        </Link>
+                        <div className="flex flex-col sm:flex-row justify-center gap-6">
+                            <Link
+                                to="/quote"
+                                className="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20 font-display text-center"
+                            >
+                                Get Free Quote
+                            </Link>
+                            <Link
+                                to="/investment-guide"
+                                className="bg-slate-100 text-slate-800 border border-slate-200 px-10 py-5 rounded-full font-bold text-lg hover:bg-slate-200 transition-all font-display text-center"
+                            >
+                                See Price Guide
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>
