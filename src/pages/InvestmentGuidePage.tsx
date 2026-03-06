@@ -293,8 +293,8 @@ const InvestmentGuidePage = () => {
             />
 
             {/* Squeeze Hero */}
-            <section className="bg-slate-950 text-white pt-48 pb-32 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-40">
+            <section className="bg-slate-950 text-white pt-32 pb-24 relative overflow-hidden">
+                <div className="absolute inset-0 z-0">
                     <img
                         src="/hero-home-v3.jpg"
                         alt="Luxury Remodeling"
@@ -334,19 +334,14 @@ const InvestmentGuidePage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.2 }}
-                                    className="relative max-w-sm"
+                                    className="relative max-w-sm mx-auto lg:mx-0"
                                 >
-                                    <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border-8 border-white/10 group">
+                                    <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border-8 border-white group">
                                         <img
                                             src="/about-kyle.jpg"
                                             alt="Kyle Stack"
                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80" />
-                                        <div className="absolute bottom-6 left-6 right-6">
-                                            <p className="text-white font-display font-bold text-xl mb-1">Kyle Stack</p>
-                                            <p className="text-primary font-bold text-sm uppercase tracking-wider">Owner & Founder</p>
-                                        </div>
                                     </div>
                                     <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-3xl shadow-xl hidden sm:block z-20">
                                         <p className="text-3xl font-display font-bold">15+</p>
