@@ -21,7 +21,7 @@ const WindowDoorInstallation = () => {
                 <div className="absolute inset-0 z-0 text-center">
                     <div className="absolute inset-0 bg-slate-950/70 z-10" />
                     <img
-                        src="/service-windows.jpg"
+                        src="/gallery-windows.png"
                         alt="Window and Door Installation"
                         className="absolute inset-0 w-full h-full object-cover opacity-50"
                     />
