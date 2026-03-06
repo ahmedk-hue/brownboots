@@ -115,6 +115,11 @@ export const QuoteFunnel = () => {
     const nextStep = () => setCurrentStep(prev => prev + 1);
     const prevStep = () => setCurrentStep(prev => prev - 1);
 
+    const handleNext = (e) => {
+        e.preventDefault();
+        nextStep();
+    };
+
     const progress = ((currentStep + 1) / steps.length) * 100;
 
     if (isSubmitted) {
@@ -178,7 +183,7 @@ export const QuoteFunnel = () => {
                     <p className="text-xl text-slate-500 mb-10 leading-relaxed">{step.subtitle}</p>
 
                     {step.isInput ? (
-                        <form onSubmit={currentStep === steps.length - 1 ? handleSubmit : nextStep} className="space-y-6">
+                        <form onSubmit={currentStep === steps.length - 1 ? handleSubmit : handleNext} className="space-y-6">
                             {step.fields.map((field) => (
                                 <div key={field.name} className="relative">
                                     <div className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">
@@ -219,13 +224,13 @@ export const QuoteFunnel = () => {
                                     key={field.value}
                                     onClick={() => handleSelect(step.id, field.value)}
                                     className={`group p-6 rounded-[2rem] border-2 transition-all text-left flex items-center gap-4 ${formData[step.id] === field.value
-                                            ? 'border-primary bg-red-50 text-slate-900'
-                                            : 'border-slate-100 bg-white hover:border-slate-300 text-slate-600'
+                                        ? 'border-primary bg-red-50 text-slate-900'
+                                        : 'border-slate-100 bg-white hover:border-slate-300 text-slate-600'
                                         }`}
                                 >
                                     <div className={`p-3 rounded-2xl transition-all ${formData[step.id] === field.value
-                                            ? 'bg-primary text-white'
-                                            : 'bg-slate-50 text-slate-400 group-hover:bg-slate-100 group-hover:text-primary'
+                                        ? 'bg-primary text-white'
+                                        : 'bg-slate-50 text-slate-400 group-hover:bg-slate-100 group-hover:text-primary'
                                         }`}>
                                         {field.icon}
                                     </div>

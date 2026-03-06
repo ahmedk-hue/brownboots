@@ -133,7 +133,7 @@ const InvestmentGuidePage = () => {
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
                             <div className="md:col-span-4 aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
                                 <img
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+                                    src="/about-kyle.jpg"
                                     alt="Kyle Stack"
                                     className="w-full h-full object-cover"
                                 />
