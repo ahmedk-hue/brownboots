@@ -50,7 +50,7 @@ const AboutPage = () => {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="relative max-w-sm mx-auto"
+                            className="relative"
                         >
                             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border-8 border-white group">
                                 <img
@@ -59,7 +59,7 @@ const AboutPage = () => {
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                             </div>
-                            <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-3xl shadow-xl hidden md:block z-20">
+                            <div className="absolute -bottom-8 -right-8 bg-primary text-white p-8 rounded-3xl shadow-xl hidden md:block z-20">
                                 <p className="text-3xl font-display font-bold">15+</p>
                                 <p className="text-sm font-medium opacity-90">Years Experience</p>
                             </div>
