@@ -294,14 +294,7 @@ const InvestmentGuidePage = () => {
 
             {/* Squeeze Hero */}
             <section className="bg-slate-950 text-white pt-40 pb-24 relative overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src="/hero-home-v3.jpg"
-                        alt="Luxury Remodeling"
-                        className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-slate-950/80 z-10" />
-                </div>
+
 
                 <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
                     <AnimatedGradient />
