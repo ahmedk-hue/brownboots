@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Home, CheckCircle2, ArrowRight, Calendar, ClipboardCheck, PencilRuler, HardHat, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import { AnimatedGradient } from '../../components/effects/AnimatedGradient';
 import { Particles } from '../../components/effects/Particles';
