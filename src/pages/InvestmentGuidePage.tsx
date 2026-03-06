@@ -131,9 +131,9 @@ const InvestmentGuidePage = () => {
                 <section className="py-24 bg-white">
                     <div className="container mx-auto px-4 max-w-5xl">
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-                            <div className="md:col-span-4 aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
+                            <div className="md:col-span-4 aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl bg-slate-100">
                                 <img
-                                    src="/about-kyle.jpg"
+                                    src="/about-kyle.png"
                                     alt="Kyle Stack"
                                     className="w-full h-full object-cover"
                                 />
@@ -296,6 +296,18 @@ const InvestmentGuidePage = () => {
                     <AnimatedGradient />
                     <Particles />
                     <LightBeams />
+                </div>
+
+                {/* Kyle Cutout Layer */}
+                <div className="absolute bottom-0 right-0 z-0 pointer-events-none w-full max-w-7xl mx-auto flex justify-center lg:justify-start lg:ml-[10%] opacity-50 lg:opacity-100 hidden md:flex">
+                    <motion.img
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                        src="/about-kyle.png"
+                        alt="Kyle Stack"
+                        className="h-[40rem] lg:h-[48rem] object-contain object-bottom filter drop-shadow-2xl"
+                    />
                 </div>
 
                 <div className="container mx-auto px-4 relative z-10">
