@@ -62,14 +62,14 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a
                 href="#contact"
-                className="px-8 py-4 bg-primary text-white font-bold rounded-lg hover:bg-red-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/25"
+                className="px-10 py-4 bg-primary text-white font-bold rounded-full hover:bg-red-700 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/25"
               >
                 Request A Quote <ArrowRight className="w-5 h-5" />
               </a>
 
               <Link
                 to="/quote"
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20"
               >
                 Get My Free Estimate
               </Link>
