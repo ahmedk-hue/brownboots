@@ -323,33 +323,36 @@ const InvestmentGuidePage = () => {
                                 <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full font-bold mb-8 border border-primary/30">
                                     <DollarSign className="w-5 h-5" /> 2026 Home Investment Guide
                                 </div>
-                                <h1 className="text-5xl md:text-8xl font-display font-bold mb-8 tracking-tighter leading-tight">
+                                <h1 className="text-4xl md:text-6xl font-display font-bold mb-8 tracking-tighter leading-tight">
                                     Want to Remodel but Don’t Know <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary italic underline decoration-primary/30 underline-offset-8">Where to Start with the Budget?</span>
                                 </h1>
-                                <p className="text-2xl text-slate-300 mb-12 leading-relaxed">
-                                    Download our free <strong>2026 Westmoreland County Home Investment Guide</strong>. Get realistic pricing for kitchens, baths, and more—built specifically for local homeowners who value quality that lasts.
+                                <p className="text-xl text-slate-300 mb-12 leading-relaxed">
+                                    Download our free <strong>2026 Westmoreland County Home Investment Guide</strong>. Get realistic pricing for kitchens, baths, and more.
                                 </p>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-primary shrink-0">
-                                            <Download className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-white mb-2">Cost Breakdowns</h3>
-                                            <p className="text-slate-400 text-sm">See what local residents are actually spending in 2026.</p>
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.2 }}
+                                    className="relative max-w-sm"
+                                >
+                                    <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl bg-slate-100 border-8 border-white/10 group">
+                                        <img
+                                            src="/about-kyle.jpg"
+                                            alt="Kyle Stack"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80" />
+                                        <div className="absolute bottom-6 left-6 right-6">
+                                            <p className="text-white font-display font-bold text-xl mb-1">Kyle Stack</p>
+                                            <p className="text-primary font-bold text-sm uppercase tracking-wider">Owner & Founder</p>
                                         </div>
                                     </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center text-primary shrink-0">
-                                            <Sparkles className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-white mb-2">Value vs. Cost</h3>
-                                            <p className="text-slate-400 text-sm">Upgrade strategies that increase appraisal value.</p>
-                                        </div>
+                                    <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-3xl shadow-xl hidden sm:block z-20">
+                                        <p className="text-3xl font-display font-bold">15+</p>
+                                        <p className="text-sm font-medium opacity-90">Years Experience</p>
                                     </div>
-                                </div>
+                                </motion.div>
                             </motion.div>
                         </div>
 
