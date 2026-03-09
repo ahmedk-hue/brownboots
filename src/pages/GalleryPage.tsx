@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 
 const projects = [
     {
-        image: "/kitchen-after-1.jpg",
+        image: "/gallery-kitchen.png",
         title: "Modern Kitchen Transformation",
         category: "Full Remodel",
         description: "A complete kitchen overhaul featuring custom white cabinetry, premium granite finishes, and a modern open-concept layout."
@@ -29,13 +29,13 @@ const projects = [
         description: "The original state of the kitchen, showcasing the dramatic improvement in functionality and style."
     },
     {
-        image: "/bedroom-after-1.jpg",
+        image: "/bathroom-after-1.jpg",
         title: "Bedroom Refresh",
         category: "Remodeling",
         description: "From dated carpet to modern flooring and fresh paint, this bedroom was completely revitalized for a cozy, premium feel."
     },
     {
-        image: "/project-bedroom-before-1.jpg",
+        image: "/bedroom-before-1.jpg",
         title: "Bedroom - Before",
         category: "Remodeling",
         description: "Initial state of the bedroom prior to our team stepping in to modernize the space."

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const projects = [
   {
-    image: "/kitchen-after-1.jpg",
+    image: "/gallery-kitchen.png",
     title: "Modern Kitchen Transformation",
     category: "Full Remodel"
   },
@@ -14,12 +14,12 @@ const projects = [
     category: "Full Remodel"
   },
   {
-    image: "/bedroom-after-1.jpg",
+    image: "/bathroom-after-1.jpg",
     title: "Bedroom Refresh",
     category: "Remodeling"
   },
   {
-    image: "/project-bedroom-before-1.jpg",
+    image: "/bedroom-before-1.jpg",
     title: "Bedroom - Before",
     category: "Remodeling"
   },
