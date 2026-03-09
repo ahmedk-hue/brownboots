@@ -78,15 +78,37 @@ const InvestmentGuidePage = () => {
         budget: ''
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
-        // Simulate webhook
-        setTimeout(() => {
+
+        try {
+            const submissionData = {
+                ...formData,
+                _subject: "New Investment Guide Lead (BrownBoot)",
+                _captcha: "false"
+            };
+
+            const response = await fetch("https://formsubmit.co/ajax/ahmedk@buildsurge.co", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(submissionData)
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                console.error("Form submission failed");
+            }
+        } catch (error) {
+            console.error(error);
+        } finally {
             setLoading(false);
-            setIsSubmitted(true);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 1200);
+        }
     };
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {

@@ -98,18 +98,36 @@ export const QuoteFunnel = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
 
-        // Webhook integration placeholder
-        // const webhookUrl = "[Paste URL Here]";
-        // await fetch(webhookUrl, { method: 'POST', body: JSON.stringify(formData) });
+        try {
+            const submissionData = {
+                ...formData,
+                _subject: "New Quote Request (BrownBoot)",
+                _captcha: "false"
+            };
 
-        setTimeout(() => {
+            const response = await fetch("https://formsubmit.co/ajax/ahmedk@buildsurge.co", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(submissionData)
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+            } else {
+                console.error("Form submission failed");
+            }
+        } catch (error) {
+            console.error(error);
+        } finally {
             setLoading(false);
-            setIsSubmitted(true);
-        }, 1500);
+        }
     };
 
     const nextStep = () => setCurrentStep(prev => prev + 1);
