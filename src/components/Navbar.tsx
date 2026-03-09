@@ -8,17 +8,27 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // On subpages, we force the solid/dark styles so the navbar is visible against white backgrounds
   const isHomepage = pathname === "/";
   const shouldShowSolid = isScrolled || !isHomepage;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Lock body scroll when open
+  useEffect(() => {
+    document.body.style.overflow = isMobileMenuOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isMobileMenuOpen]);
+
+  const close = () => setIsMobileMenuOpen(false);
 
   return (
     <nav
@@ -34,6 +44,7 @@ export function Navbar() {
           />
         </Link>
 
+        {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-4 xl:gap-6 text-[13px] xl:text-[15px]">
           <div className="relative group">
             <Link to="/services" className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>
@@ -84,82 +95,145 @@ export function Navbar() {
           </div>
 
           <Link to="/contact" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Contact</Link>
+
           <a
             href="tel:724-995-3320"
-            className={`flex items-center gap-2 px-4 py-2 xl:px-5 xl:py-2.5 rounded-full font-bold transition-all shadow-lg ${shouldShowSolid
-              ? "bg-primary text-white hover:bg-red-700 shadow-primary/20"
-              : "bg-white text-primary hover:bg-slate-100 shadow-white/10"
+            className={`flex items-center gap-2 px-4 py-2 xl:px-5 xl:py-2.5 rounded-full font-bold transition-all shadow-lg ${shouldShowSolid ? "bg-primary text-white hover:bg-red-700 shadow-primary/20" : "bg-white text-primary hover:bg-slate-100 shadow-white/10"
               }`}
           >
             <Phone className="w-4 h-4" /> (724) 995-3320
           </a>
+
           <a
             href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
             target="_blank"
             rel="noopener noreferrer"
-            className={`hidden xl:flex items-center gap-2 px-5 py-2.5 rounded-full font-bold transition-all border ${shouldShowSolid
-              ? "border-slate-200 text-slate-600 hover:bg-slate-50"
-              : "border-white/20 text-white hover:bg-white/10"
+            className={`hidden xl:flex items-center gap-2 px-5 py-2.5 rounded-full font-bold transition-all border ${shouldShowSolid ? "border-slate-200 text-slate-600 hover:bg-slate-50" : "border-white/20 text-white hover:bg-white/10"
               }`}
           >
             Client Login
           </a>
         </div>
 
+        {/* Mobile Hamburger */}
         <button
-          className="lg:hidden text-primary"
+          className="lg:hidden p-2 rounded-lg transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          {isMobileMenuOpen ? <X /> : <Menu className={shouldShowSolid ? "text-slate-900" : "text-white"} />}
+          {isMobileMenuOpen
+            ? <X className="w-6 h-6 text-white" />
+            : <Menu className={`w-6 h-6 ${shouldShowSolid ? "text-slate-900" : "text-white"}`} />
+          }
         </button>
       </div>
 
+      {/* Full-Screen Mobile Menu Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 overflow-hidden shadow-2xl absolute w-full top-full"
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ type: "tween", duration: 0.32, ease: [0.32, 0.72, 0, 1] }}
+            className="lg:hidden fixed inset-0 z-[100] bg-slate-950 flex flex-col overflow-y-auto"
           >
-            <div className="container mx-auto px-6 py-8 flex flex-col gap-3 max-h-[85vh] overflow-y-auto pb-24">
-              <div className="grid grid-cols-1 gap-2 border-b border-slate-100 pb-6 mb-2">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest pl-2">Services</span>
-                <Link to="/services/kitchen-remodeling" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Kitchen Remodeling</Link>
-                <Link to="/services/bathroom-remodeling" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Bathroom Remodeling</Link>
-                <Link to="/services/basement-remodeling" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Basement Remodeling</Link>
-                <Link to="/services/trim-carpentry" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Trim Carpentry</Link>
-                <Link to="/services/windows-doors" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Windows & Doors</Link>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2 border-b border-slate-100 pb-6 mb-2">
-                <div className="col-span-2">
-                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest pl-2 mb-2 block">Our Locations</span>
-                </div>
-                <Link to="/locations/irwin" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Irwin</Link>
-                <Link to="/locations/greensburg" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Greensburg</Link>
-                <Link to="/locations/murrysville" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Murrysville</Link>
-                <Link to="/locations/export" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Export</Link>
-                <Link to="/locations/north-huntingdon" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>N. Huntingdon</Link>
-                <Link to="/locations/jeannette" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Jeannette</Link>
-              </div>
-
-              <div className="flex flex-col gap-2 border-b border-slate-100 pb-6 mb-2">
-                <Link to="/gallery" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>Project Gallery</Link>
-                <Link to="/process" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>Process</Link>
-                <Link to="/about" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-                <Link to="/partnerships" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>Partnerships</Link>
-                <Link to="/referrals" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>Referral Program</Link>
-              </div>
-
-              <div className="flex flex-col gap-3">
-                <Link to="/investment-guide" className="p-4 text-center text-lg font-bold text-white bg-primary rounded-2xl active:scale-[0.98] transition-all shadow-xl shadow-primary/20" onClick={() => setIsMobileMenuOpen(false)}>Investment Guide</Link>
-                <a href="tel:724-995-3320" className="p-4 flex items-center justify-center gap-2 text-lg font-bold text-slate-900 bg-slate-100 rounded-2xl active:scale-[0.98] transition-all">
-                  <Phone className="w-5 h-5" /> (724) 995-3320
-                </a>
-                <Link to="/contact" className="p-4 text-center text-lg font-bold text-primary bg-primary/10 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
-              </div>
+            {/* Menu Header */}
+            <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 shrink-0">
+              <Link to="/" onClick={close}>
+                <img src="/logo-navbar.png" alt="BrownBoot" className="h-9 w-auto brightness-0 invert" />
+              </Link>
+              <button
+                onClick={close}
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                aria-label="Close menu"
+              >
+                <X className="w-5 h-5 text-white" />
+              </button>
             </div>
+
+            {/* Menu Body */}
+            <div className="flex-1 px-6 py-8 flex flex-col gap-10">
+
+              {/* Services Grid */}
+              <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}>
+                <p className="text-xs font-bold text-slate-500 uppercase tracking-[0.15em] mb-4">Services</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {[
+                    { to: "/services/kitchen-remodeling", label: "Kitchen" },
+                    { to: "/services/bathroom-remodeling", label: "Bathroom" },
+                    { to: "/services/basement-remodeling", label: "Basement" },
+                    { to: "/services/trim-carpentry", label: "Trim & Carpentry" },
+                    { to: "/services/windows-doors", label: "Windows & Doors" },
+                    { to: "/services", label: "All Services →" },
+                  ].map(({ to, label }) => (
+                    <Link
+                      key={to}
+                      to={to}
+                      onClick={close}
+                      className="bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl px-4 py-3 text-sm font-bold text-white transition-colors active:scale-95"
+                    >
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Navigation Links */}
+              <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.14 }}>
+                <p className="text-xs font-bold text-slate-500 uppercase tracking-[0.15em] mb-4">Navigate</p>
+                <div className="flex flex-col">
+                  {[
+                    { to: "/gallery", label: "Project Gallery" },
+                    { to: "/process", label: "Our Process" },
+                    { to: "/about", label: "About Us" },
+                    { to: "/locations", label: "Locations" },
+                    { to: "/partnerships", label: "Partnerships" },
+                    { to: "/referrals", label: "Referral Program" },
+                    { to: "/contact", label: "Contact" },
+                  ].map(({ to, label }) => (
+                    <Link
+                      key={to}
+                      to={to}
+                      onClick={close}
+                      className="flex items-center justify-between py-4 text-lg font-bold text-white border-b border-white/[0.08] hover:text-primary transition-colors last:border-0"
+                    >
+                      {label}
+                      <span className="text-slate-600">›</span>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Footer CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.22 }}
+              className="px-6 pb-10 pt-4 flex flex-col gap-3 border-t border-white/10 shrink-0"
+            >
+              <Link
+                to="/contact"
+                onClick={close}
+                className="w-full bg-primary text-white font-bold text-lg py-4 rounded-2xl text-center shadow-2xl shadow-primary/30 active:scale-[0.98] transition-all"
+              >
+                Get a Free Quote
+              </Link>
+              <a
+                href="tel:724-995-3320"
+                className="w-full flex items-center justify-center gap-2 bg-white/10 text-white font-bold text-base py-4 rounded-2xl border border-white/15 active:scale-[0.98] transition-all"
+              >
+                <Phone className="w-5 h-5" /> (724) 995-3320
+              </a>
+              <Link
+                to="/investment-guide"
+                onClick={close}
+                className="w-full text-center text-primary font-bold text-sm py-3 active:opacity-70 transition-opacity"
+              >
+                Download Free Investment Guide →
+              </Link>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
