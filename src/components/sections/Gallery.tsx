@@ -9,7 +9,7 @@ const projects = [
     category: "Full Remodel"
   },
   {
-    image: "/kitchen-before-1.jpg",
+    image: "/project-kitchen-before-1.jpg",
     title: "Kitchen - Before",
     category: "Full Remodel"
   },

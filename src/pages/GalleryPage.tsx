@@ -23,7 +23,7 @@ const projects = [
         description: "A look at the professional installation process and utility updates during the peak of this major transformation."
     },
     {
-        image: "/kitchen-before-1.jpg",
+        image: "/project-kitchen-before-1.jpg",
         title: "Kitchen - Before",
         category: "Full Remodel",
         description: "The original state of the kitchen, showcasing the dramatic improvement in functionality and style."
