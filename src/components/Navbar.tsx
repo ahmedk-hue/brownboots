@@ -30,11 +30,11 @@ export function Navbar() {
           <img
             src="/logo-navbar.png"
             alt="BrownBoot Repairs & Remodeling"
-            className="h-10 md:h-12 w-auto object-contain transition-transform hover:scale-105"
+            className="h-8 lg:h-10 w-auto object-contain transition-transform hover:scale-105"
           />
         </Link>
 
-        <div className="hidden lg:flex items-center gap-4 xl:gap-8 text-sm xl:text-base">
+        <div className="hidden lg:flex items-center gap-3 xl:gap-5 text-xs xl:text-sm">
           <div className="relative group">
             <Link to="/services" className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>
               Services <ChevronDown className="w-4 h-4" />
@@ -86,7 +86,7 @@ export function Navbar() {
           <Link to="/contact" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Contact</Link>
           <a
             href="tel:724-995-3320"
-            className={`flex items-center gap-2 px-4 py-2 xl:px-6 xl:py-3 rounded-full font-bold transition-all shadow-lg ${shouldShowSolid
+            className={`flex items-center gap-1.5 px-3 py-1.5 xl:px-5 xl:py-2.5 rounded-full font-bold transition-all shadow-lg ${shouldShowSolid
               ? "bg-primary text-white hover:bg-red-700 shadow-primary/20"
               : "bg-white text-primary hover:bg-slate-100 shadow-white/10"
               }`}
@@ -97,7 +97,7 @@ export function Navbar() {
             href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
             target="_blank"
             rel="noopener noreferrer"
-            className={`hidden xl:flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all border ${shouldShowSolid
+            className={`hidden xl:flex items-center gap-1.5 px-5 py-2.5 rounded-full font-bold transition-all border ${shouldShowSolid
               ? "border-slate-200 text-slate-600 hover:bg-slate-50"
               : "border-white/20 text-white hover:bg-white/10"
               }`}
