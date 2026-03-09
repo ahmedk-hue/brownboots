@@ -34,7 +34,7 @@ export function Navbar() {
           />
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-8 text-sm xl:text-base">
           <div className="relative group">
             <Link to="/services" className={`font-medium flex items-center gap-1 hover:text-primary transition-colors cursor-pointer ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>
               Services <ChevronDown className="w-4 h-4" />
@@ -86,7 +86,7 @@ export function Navbar() {
           <Link to="/contact" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Contact</Link>
           <a
             href="tel:724-995-3320"
-            className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all shadow-lg ${shouldShowSolid
+            className={`flex items-center gap-2 px-4 py-2 xl:px-6 xl:py-3 rounded-full font-bold transition-all shadow-lg ${shouldShowSolid
               ? "bg-primary text-white hover:bg-red-700 shadow-primary/20"
               : "bg-white text-primary hover:bg-slate-100 shadow-white/10"
               }`}
@@ -97,7 +97,7 @@ export function Navbar() {
             href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
             target="_blank"
             rel="noopener noreferrer"
-            className={`hidden lg:flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all border ${shouldShowSolid
+            className={`hidden xl:flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all border ${shouldShowSolid
               ? "border-slate-200 text-slate-600 hover:bg-slate-50"
               : "border-white/20 text-white hover:bg-white/10"
               }`}
@@ -107,7 +107,7 @@ export function Navbar() {
         </div>
 
         <button
-          className="md:hidden text-primary"
+          className="lg:hidden text-primary"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X /> : <Menu className={shouldShowSolid ? "text-slate-900" : "text-white"} />}
@@ -120,7 +120,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 overflow-hidden shadow-2xl absolute w-full top-full"
+            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 overflow-hidden shadow-2xl absolute w-full top-full"
           >
             <div className="container mx-auto px-6 py-8 flex flex-col gap-3 max-h-[85vh] overflow-y-auto pb-24">
               <div className="grid grid-cols-1 gap-2 border-b border-slate-100 pb-6 mb-2">

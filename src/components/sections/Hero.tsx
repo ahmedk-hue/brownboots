@@ -71,7 +71,7 @@ export function Hero() {
                 to="/investment-guide"
                 className="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20"
               >
-                See our pricing
+                See Our Pricing
               </Link>
             </div>
 
