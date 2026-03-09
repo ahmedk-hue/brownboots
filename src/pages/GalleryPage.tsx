@@ -18,7 +18,7 @@ const projects = [
     },
     {
         image: "/kitchen-during-1.jpg",
-        title: "Kitchen Remodel in Progress",
+        title: "Living Room Remodel in Progress",
         category: "Full Remodel",
         description: "A look at the professional installation process and utility updates during the peak of this major transformation."
     },
