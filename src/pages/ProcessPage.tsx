@@ -163,12 +163,12 @@ const ProcessPage = () => {
             {/* CTA Section */}
             <section className="py-24 bg-white">
                 <div className="container mx-auto px-4 text-center">
-                    <div className="bg-slate-50 border border-slate-100 rounded-[3rem] p-12 md:p-24 relative overflow-hidden shadow-xl">
+                    <div className="bg-slate-900 border border-slate-800 rounded-[3rem] p-12 md:p-24 relative overflow-hidden shadow-xl">
                         <div className="max-w-3xl mx-auto relative z-10">
-                            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-8 tracking-tight">
+                            <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-8 tracking-tight">
                                 Ready to Start <span className="text-primary">Step 1?</span>
                             </h2>
-                            <p className="text-xl text-slate-600 mb-12 leading-relaxed">
+                            <p className="text-xl text-slate-300 mb-12 leading-relaxed">
                                 Schedule your free home visit today and experience the clarity of our remodeling process firsthand.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

@@ -29,7 +29,7 @@ const projects = [
     category: "Flooring"
   },
   {
-    image: "/bathroom-after-1.jpg",
+    image: "/gallery-bathroom.png",
     title: "Bathroom Modernization",
     category: "Bathroom"
   }

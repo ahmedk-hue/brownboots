@@ -66,6 +66,7 @@ export function Navbar() {
             </div>
           </div>
 
+          <Link to="/gallery" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Project Gallery</Link>
           <Link to="/process" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>Process</Link>
           <Link to="/about" className={`font-medium hover:text-primary transition-colors ${shouldShowSolid ? "text-slate-600" : "text-white/90"}`}>About</Link>
 
@@ -119,45 +120,45 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-slate-100 overflow-hidden"
+            className="md:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 overflow-hidden shadow-2xl absolute w-full top-full"
           >
-            <div className="container mx-auto px-4 py-8 flex flex-col gap-4">
-              <Link to="/services/kitchen-remodeling" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Kitchen Remodeling</Link>
-              <Link to="/services/bathroom-remodeling" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Bathroom Remodeling</Link>
-              <Link to="/services/basement-remodeling" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Basement Remodeling</Link>
-              <Link to="/services/trim-carpentry" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Trim Carpentry</Link>
-              <Link to="/services/windows-doors" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Windows & Doors</Link>
-
-              <div className="pt-4 border-t border-slate-50">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2 block">Our Locations</span>
-                <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                  <Link to="/locations/irwin" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Irwin</Link>
-                  <Link to="/locations/greensburg" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Greensburg</Link>
-                  <Link to="/locations/murrysville" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Murrysville</Link>
-                  <Link to="/locations/export" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Export</Link>
-                  <Link to="/locations/north-huntingdon" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>N. Huntingdon</Link>
-                  <Link to="/locations/jeannette" className="text-sm font-medium text-slate-700" onClick={() => setIsMobileMenuOpen(false)}>Jeannette</Link>
-                </div>
+            <div className="container mx-auto px-6 py-8 flex flex-col gap-3 max-h-[85vh] overflow-y-auto pb-24">
+              <div className="grid grid-cols-1 gap-2 border-b border-slate-100 pb-6 mb-2">
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest pl-2">Services</span>
+                <Link to="/services/kitchen-remodeling" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Kitchen Remodeling</Link>
+                <Link to="/services/bathroom-remodeling" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Bathroom Remodeling</Link>
+                <Link to="/services/basement-remodeling" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Basement Remodeling</Link>
+                <Link to="/services/trim-carpentry" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Trim Carpentry</Link>
+                <Link to="/services/windows-doors" className="p-3 text-base font-bold text-slate-900 bg-slate-50 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Windows & Doors</Link>
               </div>
 
-              <Link to="/process" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Process</Link>
-              <Link to="/about" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
-              <Link to="/partnerships" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Partnerships</Link>
-              <Link to="/referrals" className="text-lg font-medium text-slate-900" onClick={() => setIsMobileMenuOpen(false)}>Referral Program</Link>
-              <Link to="/investment-guide" className="text-lg font-bold text-primary pt-2 underline decoration-primary/30" onClick={() => setIsMobileMenuOpen(false)}>Home Investment Guide</Link>
-              <Link to="/contact" className="text-lg font-medium text-slate-900 pt-2" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-              <a
-                href="https://clienthub.getjobber.com/client_hubs/7ea983f8-3b2e-435e-a8d7-acebb8ed14b3/login/new?source=share_login"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-lg font-medium text-primary pt-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Client Login (Jobber)
-              </a>
-              <a href="tel:724-995-3320" className="text-lg font-bold text-primary flex items-center gap-2">
-                <Phone className="w-5 h-5" /> (724) 995-3320
-              </a>
+              <div className="grid grid-cols-2 gap-2 border-b border-slate-100 pb-6 mb-2">
+                <div className="col-span-2">
+                  <span className="text-xs font-bold text-slate-400 uppercase tracking-widest pl-2 mb-2 block">Our Locations</span>
+                </div>
+                <Link to="/locations/irwin" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Irwin</Link>
+                <Link to="/locations/greensburg" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Greensburg</Link>
+                <Link to="/locations/murrysville" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Murrysville</Link>
+                <Link to="/locations/export" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Export</Link>
+                <Link to="/locations/north-huntingdon" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>N. Huntingdon</Link>
+                <Link to="/locations/jeannette" className="p-3 text-sm font-bold text-slate-700 bg-slate-50 rounded-xl text-center active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Jeannette</Link>
+              </div>
+
+              <div className="flex flex-col gap-2 border-b border-slate-100 pb-6 mb-2">
+                <Link to="/gallery" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>Project Gallery</Link>
+                <Link to="/process" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>Process</Link>
+                <Link to="/about" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
+                <Link to="/partnerships" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>Partnerships</Link>
+                <Link to="/referrals" className="p-3 text-base font-bold text-slate-900 hover:bg-slate-50 rounded-xl transition-all" onClick={() => setIsMobileMenuOpen(false)}>Referral Program</Link>
+              </div>
+
+              <div className="flex flex-col gap-3">
+                <Link to="/investment-guide" className="p-4 text-center text-lg font-bold text-white bg-primary rounded-2xl active:scale-[0.98] transition-all shadow-xl shadow-primary/20" onClick={() => setIsMobileMenuOpen(false)}>Investment Guide</Link>
+                <a href="tel:724-995-3320" className="p-4 flex items-center justify-center gap-2 text-lg font-bold text-slate-900 bg-slate-100 rounded-2xl active:scale-[0.98] transition-all">
+                  <Phone className="w-5 h-5" /> (724) 995-3320
+                </a>
+                <Link to="/contact" className="p-4 text-center text-lg font-bold text-primary bg-primary/10 rounded-2xl active:scale-[0.98] transition-all" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
+              </div>
             </div>
           </motion.div>
         )}

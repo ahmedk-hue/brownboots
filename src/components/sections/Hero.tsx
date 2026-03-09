@@ -41,7 +41,7 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-display font-bold mb-6 leading-tight tracking-tighter">
+            <h1 className="text-5xl md:text-7xl font-display font-bold mb-6 leading-tight tracking-tighter">
               Precision Repairs. <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-primary drop-shadow-sm">
                 Expert Remodeling.
@@ -68,10 +68,10 @@ export function Hero() {
               </a>
 
               <Link
-                to="/quote"
+                to="/investment-guide"
                 className="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-red-700 transition-all shadow-xl shadow-primary/20"
               >
-                Get My Free Estimate
+                See our pricing
               </Link>
             </div>
 

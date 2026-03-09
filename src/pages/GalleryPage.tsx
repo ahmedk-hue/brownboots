@@ -47,7 +47,7 @@ const projects = [
         description: "Installation of high-durability modern flooring that completely changes the aesthetic and feel of the main living area."
     },
     {
-        image: "/bathroom-after-1.jpg",
+        image: "/gallery-bathroom.png",
         title: "Bathroom Modernization",
         category: "Bathroom",
         description: "A sleek, clean bathroom update featuring new tiling and fixtures for a professional finish."

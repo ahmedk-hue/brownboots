@@ -18,8 +18,8 @@ export function Contact() {
               Planning a Remodel?
             </h3>
             <p className="text-slate-300 mb-8 relative z-10 text-lg">
-              Download our free guide: <strong className="text-white">"How To Add Value To Your Home When You Remodel"</strong>.
-              Learn the secrets to maximizing your investment.
+              Download our free <strong className="text-white">Home Investment Guide</strong>.
+              Learn the secrets to maximizing your investment and budgeting for your project.
             </p>
 
             <ul className="space-y-4 mb-8 relative z-10">

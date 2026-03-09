@@ -141,8 +141,8 @@ export const QuoteFunnel = () => {
                     <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-3xl -mr-16 -mt-16 group-hover:scale-110 transition-transform"></div>
                     <div className="relative z-10 text-left">
                         <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block">Free Gift</span>
-                        <h3 className="text-2xl font-display font-bold mb-4 italic">How To Add Value To Your Home When You Remodel</h3>
-                        <p className="text-slate-400 mb-6 text-sm">We've sent your exclusive guide to <span className="text-white font-medium">{formData.email}</span>. Use these tips to maximize your investment.</p>
+                        <h3 className="text-2xl font-display font-bold mb-4 italic">Home Investment Guide</h3>
+                        <p className="text-slate-400 mb-6 text-sm">We've sent your exclusive guide to <span className="text-white font-medium">{formData.email}</span>. Use these tips to maximize your investment and budget for your project.</p>
                         <button className="flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all">
                             Download Guide Now <ArrowRight className="w-5 h-5" />
                         </button>
