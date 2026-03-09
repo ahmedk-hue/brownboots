@@ -23,7 +23,7 @@ const projects = [
         description: "A look at the professional installation process and utility updates during the peak of this major transformation."
     },
     {
-        image: "/kitchen-before-1.jpg",
+        image: "/project-kitchen-before-1.jpg",
         title: "Kitchen - Before",
         category: "Full Remodel",
         description: "The original state of the kitchen, showcasing the dramatic improvement in functionality and style."
@@ -35,7 +35,7 @@ const projects = [
         description: "From dated carpet to modern flooring and fresh paint, this bedroom was completely revitalized for a cozy, premium feel."
     },
     {
-        image: "/bedroom-before-1.jpg",
+        image: "/project-bedroom-before-1.jpg",
         title: "Bedroom - Before",
         category: "Remodeling",
         description: "Initial state of the bedroom prior to our team stepping in to modernize the space."

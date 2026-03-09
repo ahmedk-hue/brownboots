@@ -9,7 +9,7 @@ const projects = [
     category: "Full Remodel"
   },
   {
-    image: "/kitchen-before-1.jpg",
+    image: "/project-kitchen-before-1.jpg",
     title: "Kitchen - Before",
     category: "Full Remodel"
   },
@@ -19,7 +19,7 @@ const projects = [
     category: "Remodeling"
   },
   {
-    image: "/bedroom-before-1.jpg",
+    image: "/project-bedroom-before-1.jpg",
     title: "Bedroom - Before",
     category: "Remodeling"
   },
